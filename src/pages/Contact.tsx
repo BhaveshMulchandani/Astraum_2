@@ -33,7 +33,7 @@ export default function Contact() {
             />
 
             <h2 className="font-display text-4xl mb-2 text-foreground">
-              New York
+              India
             </h2>
 
             <p className="text-foreground text-2xl mb-4">11:23 am</p>
@@ -45,7 +45,7 @@ export default function Contact() {
               newyork@pentagram.com
             </a>
 
-            <p className="text-foreground mb-2">+1 212 683 7000</p>
+            <p className="text-foreground mb-2">+91-9808983333</p>
 
             {/* <p className="text-muted-foreground text-lg mb-6">
               Pentagram New York is in the top two floors of a 12-story building
@@ -54,9 +54,10 @@ export default function Contact() {
             </p> */}
 
             <p className="text-foreground mb-2">
-              250 Park Avenue South <br />
-              New York, NY 10003 <br />
-              United States
+              Office  #410 <br />
+              Naxtra By Kavyaratna  <br />
+              Sargasan Croass Road, Below  The Fern Residency . <br />
+              Gandhinagar, Gujarat 
             </p>
 
             <a href="#" className="text-primary underline">
@@ -72,7 +73,7 @@ export default function Contact() {
             />
 
             <h2 className="font-display text-4xl mb-2 text-foreground">
-              New York
+              Dubai, UAE
             </h2>
 
             <p className="text-foreground text-2xl mb-4">11:23 am</p>
