@@ -58,7 +58,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-accent-foreground/70 mb-6 leading-relaxed">
-              Creating timeless spaces that inspire and elevate everyday living through innovative design and meticulous craftsmanship.
+              Creating timeless interiors across homes and workspaces through thoughtful design and quality craftsmanship.
             </p>
             <div className="flex gap-4">
               <a

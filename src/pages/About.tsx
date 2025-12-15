@@ -18,22 +18,22 @@ const values = [
   {
     icon: Sparkles,
     title: "Quality",
-    description: "We never compromise on quality. Every detail matters, from material selection to final finishes.",
+    description: "We deliver interiors built with care, using thoughtful material selection and meticulous craftsmanship from start to finish.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "We work closely with our clients, ensuring their vision guides every decision we make.",
+    description: "We work closely with our clients at every step, ensuring their vision shapes each design decision and final outcome.",
   },
   {
     icon: Clock,
     title: "Timeliness",
-    description: "We respect your time and deliver projects on schedule without sacrificing quality.",
+    description: "We value your time and manage each project with precision, delivering interiors on schedule without compromising quality.",
   },
   {
     icon: Award,
     title: "Innovation",
-    description: "We stay ahead of trends and embrace new technologies to create forward-thinking designs.",
+    description: "We innovate & embrace new ideas, technologies, and sustainable design practices to create spaces that feel current, functional, and future-ready.",
   },
 ];
 
@@ -80,11 +80,10 @@ export default function About() {
             About Us
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-accent-foreground mb-6 animate-fade-up animation-delay-200">
-            Crafting Spaces, Creating Stories
+            Designing Spaces with Purpose
           </h1>
           <p className="text-accent-foreground/80 text-lg md:text-xl max-w-2xl mx-auto animate-fade-up animation-delay-400">
-            A passionate team of designers, architects, and craftsmen dedicated 
-            to transforming spaces into extraordinary experiences.
+            Specialising in residential interior design, commercial interiors, and turnkey fitout services across India and the UAE.
           </p>
         </div>
       </section>
@@ -114,19 +113,14 @@ export default function About() {
                 Our Story
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground mb-6">
-                A Decade of Design Excellence
+                Over a Decade of Design Expertise
               </h2>
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Founded in 2012, Élégance Interiors began with a simple vision: to create 
-                  spaces that inspire and elevate everyday living. What started as a small 
-                  studio has grown into a full-service design firm with a reputation for 
-                  excellence.
+                 Astraum Infra, in partnership with KI Dubai, brings seven years of Dubai design expertise to residential and commercial interior design and turnkey fitouts across India and the UAE. What began as a collaboration between two design-driven studios has grown into a multidisciplinary team delivering thoughtful layouts, detailed 3D visualisations, and seamless on-site execution.
                 </p>
                 <p>
-                  Our journey has been defined by a commitment to quality, innovation, and 
-                  client satisfaction. We believe that great design should be accessible, 
-                  and we work with clients of all backgrounds to bring their visions to life.
+                  We combine global design sensibilities with local context, creating spaces that balance comfort, function, and refined aesthetics. From private homes and villas to offices, hospitality spaces, and boutique commercial projects, our work is shaped by skilled craftsmanship, transparent project delivery, and a commitment to creating interiors that feel lasting and truly lived in.
                 </p>
                 <p>
                   Today, our team of talented designers, architects, and project managers 
@@ -164,9 +158,7 @@ export default function About() {
                 Our Mission
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                To transform spaces into extraordinary environments that enhance 
-                the quality of life for our clients, while maintaining the highest 
-                standards of design excellence and sustainable practices.
+                Our mission is to deliver high-quality turnkey fitout and interior design services for residential and commercial spaces, creating interiors that balance functionality, comfort, and timeless style. We bring every vision to life with clarity and care by focusing on thoughtful space planning, sustainable materials, and a client-first design approach.
               </p>
             </div>
             <div className="bg-card p-10 rounded-lg shadow-soft">
@@ -174,9 +166,15 @@ export default function About() {
                 Our Vision
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                To be the leading interior design firm recognized for innovative 
-                solutions, exceptional craftsmanship, and unwavering commitment 
-                to client satisfaction across residential and commercial sectors.
+               Now
+ To lead in crafting personalised, transformative interior experiences that improve everyday living through thoughtful residential and commercial design and meticulous execution.
+5 years
+ To be recognised across the region as a trusted interior design firm, delivering considered residential and commercial projects that genuinely enhance how people live and work.
+10 years
+ To set new standards in design leadership by advancing sustainable practice, refined craftsmanship, and exceptional client experience across turnkey fitouts and bespoke interiors.
+15 years
+ To be a globally respected design studio known for timeless interiors, outstanding craftsmanship, and projects that inspire and empower communities everywhere.
+
               </p>
             </div>
           </div>

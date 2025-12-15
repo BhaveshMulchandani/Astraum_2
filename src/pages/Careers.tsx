@@ -72,19 +72,19 @@ const jobs = [
 const culturePoints = [
   {
     title: "Creative Freedom",
-    description: "We encourage innovative thinking and provide the freedom to explore creative solutions.",
+    description: "We encourage original thinking and give our teams the space to explore fresh design ideas and creative solutions.",
   },
   {
     title: "Growth Opportunities",
-    description: "Continuous learning and career advancement are at the heart of our culture.",
+    description: "Continuous learning and professional development are central to our culture, ensuring you grow your craft and your career.",
   },
   {
     title: "Collaborative Environment",
-    description: "Work alongside talented professionals who share your passion for design.",
+    description: "Work closely with experienced designers, architects, and project specialists who share a passion for thoughtful, high-quality design.",
   },
   {
     title: "Work-Life Balance",
-    description: "We value your well-being and support a healthy work-life balance.",
+    description: "We prioritise your well-being and support a balanced work environment where you can thrive personally and professionally.",
   },
 ];
 
@@ -141,8 +141,7 @@ export default function Careers() {
               Join Our Creative Team
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed animate-fade-up animation-delay-400">
-              We're always looking for talented individuals who share our passion 
-              for design excellence. Explore opportunities to grow with us.
+             We’re always looking for designers, architects, and project professionals who share our passion for thoughtful, high-quality interior design. Explore opportunities to grow with us and contribute to meaningful residential and commercial projects.
             </p>
           </div>
         </div>
@@ -159,8 +158,7 @@ export default function Careers() {
               Why Work With Us
             </h2>
             <p className="text-muted-foreground text-lg">
-              We foster a creative, supportive environment where talent thrives 
-              and great design happens.
+            We create a supportive, collaborative environment where designers and project teams can grow, experiment, and do meaningful work that shapes exceptional interiors.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

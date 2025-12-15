@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Palette, Building2, Home, TreePine, Star, Quote } from "lucide-react";
+import {
+  ArrowRight,
+  Palette,
+  Building2,
+  Home,
+  TreePine,
+  Star,
+  Quote,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import heroImage from "@/assets/hero-home.jpg";
@@ -12,22 +20,26 @@ const services = [
   {
     icon: Palette,
     title: "Design Consultant",
-    description: "Expert guidance to bring your vision to life with personalized design solutions.",
+    description:
+      "Every project starts with the right direction. Our interior design consultation helps us understand your goals, lifestyle, and aesthetic preferences before offering expert guidance. This process sets a clear, confident foundation for your interior design project.",
   },
   {
     icon: Building2,
     title: "Commercial Interior",
-    description: "Transform workspaces into inspiring environments that boost productivity.",
+    description:
+      "We design functional, inspiring commercial interiors that support productivity and reflect your brand identity. From space planning to material selection, our commercial interior design solutions are built for modern workplaces.",
   },
   {
     icon: Home,
     title: "Residential Design",
-    description: "Create beautiful, functional homes that reflect your unique lifestyle.",
+    description:
+      "We create cozy, practical homes that feel effortless and personal. Every element, from layout and lighting to textures and flow, is thoughtfully designed to suit your lifestyle and enhance everyday living through residential interior design.",
   },
   {
     icon: TreePine,
     title: "Landscaping",
-    description: "Harmonize indoor and outdoor spaces with stunning landscape design.",
+    description:
+      "We design calm, well-planned outdoor spaces that align with your home’s interior style. Through thoughtful planting and spatial planning, our landscape design solutions make outdoor living areas inviting, balanced, and easy to enjoy.",
   },
 ];
 
@@ -41,23 +53,26 @@ const projects = [
 const whyChooseUs = [
   {
     number: "01",
-    title: "Award-Winning Design",
-    description: "Recognized excellence in interior design with multiple industry awards.",
+    title: "Award-Winning Interior Designs",
+    description:
+      "Astraum AI has won numerous industry awards and produced the best interior designs in India.",
   },
   {
     number: "02",
-    title: "Personalized Approach",
-    description: "Every project is unique, tailored to your specific needs and vision.",
+    title: "Personalized Design Approach",
+    description:
+      "Every project is thoughtfully planned around your lifestyle, space requirements, and design preferences for truly custom interiors.",
   },
   {
     number: "03",
     title: "Expert Craftsmanship",
-    description: "Working with the finest artisans and premium materials.",
+    description: "We use high-quality materials and work with top interior designers in India.",
   },
   {
     number: "04",
-    title: "Timely Delivery",
-    description: "We respect your time with efficient project management and execution.",
+    title: "On-Time Project Delivery",
+    description:
+      "We guarantee timely execution without sacrificing design or detail through methodical planning and transparent project management.",
   },
 ];
 
@@ -95,16 +110,20 @@ export default function Index() {
         <div className="container-luxury relative z-10">
           <div className="max-w-2xl">
             <p className="text-primary font-medium tracking-widest uppercase mb-4 animate-fade-up opacity-0 animation-delay-200">
-              Luxury Interior Design
+              Luxury Interior Designers in India | Residential & Commercial
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-accent-foreground leading-tight mb-6 animate-fade-up opacity-0 animation-delay-400">
-              Transforming Spaces with Modern Interior Design
+              Designing Spaces That Complement Your Lifestyle
             </h1>
             <p className="text-accent-foreground/80 text-lg md:text-xl mb-8 leading-relaxed animate-fade-up opacity-0 animation-delay-600">
-              We craft exceptional interiors that blend elegance with functionality, 
-              creating spaces that inspire and elevate your everyday living.
+              Since humans have evolved beyond simply living under roofs, we
+              design residential and commercial interiors across India that
+              seamlessly blend comfort, elegance, and functionality.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0" style={{ animationDelay: "800ms" }}>
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0"
+              style={{ animationDelay: "800ms" }}
+            >
               <Button variant="outline-light" size="lg" asChild>
                 <Link to="/work">
                   View Our Work
@@ -130,8 +149,8 @@ export default function Index() {
               Comprehensive Design Solutions
             </h2>
             <p className="text-muted-foreground text-lg">
-              From concept to completion, we offer a full range of interior design services 
-              tailored to your unique needs.
+              From concept to completion, we offer a full range of interior
+              design services tailored to your unique needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -174,7 +193,7 @@ export default function Index() {
               Featured Projects
             </h2>
             <p className="text-muted-foreground text-lg">
-              Discover our latest work showcasing innovative designs and exceptional craftsmanship.
+              Explore a curated collection of our recent residential and commercial interior design projects, defined by clean aesthetics, thoughtful detailing, and quality craftsmanship.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -218,15 +237,14 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-primary font-medium tracking-widest uppercase mb-4">
-                Why Choose Us
+                Why Choose Us?
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground mb-6">
-                Elevating Spaces with Excellence
+                Luxury Interior Designers in India Designing Spaces with Excellence
               </h2>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                With over a decade of experience in luxury interior design, we bring 
-                unparalleled expertise and passion to every project. Our commitment to 
-                excellence ensures that every space we create is both beautiful and functional.
+               Designing high-end interiors for over a decade, we have helped people all over India turn their homes and offices into beautiful, useful spaces. Astraum AI combines careful planning, high-quality materials, and clear project management to create results that are both personal and polished. We do everything from designing homes and full-home renovations to commercial fit-outs and landscaping.
+
               </p>
               <Button variant="gold" size="lg" asChild>
                 <Link to="/about">
@@ -237,7 +255,10 @@ export default function Index() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {whyChooseUs.map((item) => (
-                <div key={item.number} className="p-6 bg-card rounded-lg shadow-soft">
+                <div
+                  key={item.number}
+                  className="p-6 bg-card rounded-lg shadow-soft"
+                >
                   <span className="text-4xl font-display font-bold text-primary/20">
                     {item.number}
                   </span>
@@ -277,13 +298,18 @@ export default function Index() {
                 </p>
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    <Star
+                      key={i}
+                      className="w-4 h-4 fill-primary text-primary"
+                    />
                   ))}
                 </div>
                 <p className="font-display font-medium text-accent-foreground">
                   {testimonial.author}
                 </p>
-                <p className="text-accent-foreground/60 text-sm">{testimonial.role}</p>
+                <p className="text-accent-foreground/60 text-sm">
+                  {testimonial.role}
+                </p>
               </div>
             ))}
           </div>
