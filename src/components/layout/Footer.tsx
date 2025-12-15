@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, ArrowRight } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Instagram,
+  Facebook,
+  Linkedin,
+  ArrowRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const quickLinks = [
@@ -58,7 +66,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-accent-foreground/70 mb-6 leading-relaxed">
-              Creating timeless interiors across homes and workspaces through thoughtful design and quality craftsmanship.
+              Creating timeless interiors across homes and workspaces through
+              thoughtful design and quality craftsmanship.
             </p>
             <div className="flex gap-4">
               <a
@@ -87,7 +96,9 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display text-lg font-medium mb-6">Quick Links</h4>
+            <h4 className="font-display text-lg font-medium mb-6">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -104,7 +115,9 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-display text-lg font-medium mb-6">Our Services</h4>
+            <h4 className="font-display text-lg font-medium mb-6">
+              Our Services
+            </h4>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
@@ -121,15 +134,17 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-display text-lg font-medium mb-6">Get In Touch</h4>
+            <h4 className="font-display text-lg font-medium mb-6">
+              Get In Touch
+            </h4>
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+91-9808983333"
                   className="flex items-center gap-3 text-accent-foreground/70 hover:text-primary transition-colors duration-300"
                 >
                   <Phone size={18} />
-                  <span>+1 (234) 567-890</span>
+                  <span>+91-9808983333</span>
                 </a>
               </li>
               <li>
@@ -138,13 +153,18 @@ export function Footer() {
                   className="flex items-center gap-3 text-accent-foreground/70 hover:text-primary transition-colors duration-300"
                 >
                   <Mail size={18} />
-                  <span>hello@eleganceinteriors.com</span>
+                  <span>info@astraumai.com</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-accent-foreground/70">
                   <MapPin size={18} className="mt-1 flex-shrink-0" />
-                  <span>123 Design Avenue, Suite 500<br />New York, NY 10001</span>
+                  <span>
+                    Office #410 <br />
+                    Naxtra By Kavyaratna <br />
+                    Sargasan Croass Road, Below The Fern Residency . <br />
+                    Gandhinagar, Gujarat{" "}
+                  </span>
                 </div>
               </li>
             </ul>
@@ -158,10 +178,16 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-accent-foreground/50">
             <p>© 2024 Élégance Interiors. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link to="#" className="hover:text-accent-foreground transition-colors">
+              <Link
+                to="#"
+                className="hover:text-accent-foreground transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link to="#" className="hover:text-accent-foreground transition-colors">
+              <Link
+                to="#"
+                className="hover:text-accent-foreground transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>
