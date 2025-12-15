@@ -122,6 +122,20 @@ export default function Partner() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+const RequiredLabel = ({
+  children,
+  className = "",
+}: {
+  children: string;
+  className?: string;
+}) => (
+  <Label className={className}>
+    {children} <span className="text-red-500">*</span>
+  </Label>
+);
+
+
+
   return (
     <Layout>
       {/* Hero */}
@@ -144,7 +158,7 @@ export default function Partner() {
         <div className="container-luxury max-w-3xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <Label>Full Name</Label>
+              <RequiredLabel>Full Name</RequiredLabel>
               <Input
                 name="name"
                 value={formData.name}
@@ -154,7 +168,7 @@ export default function Partner() {
             </div>
 
             <div>
-              <Label>Email Address</Label>
+              <RequiredLabel>Email Address</RequiredLabel>
               <Input
                 type="email"
                 name="email"
@@ -165,7 +179,7 @@ export default function Partner() {
             </div>
 
             <div>
-              <Label>Phone Number</Label>
+              <RequiredLabel>Phone Number</RequiredLabel>
               <Input
                 name="phone"
                 value={formData.phone}
@@ -184,7 +198,7 @@ export default function Partner() {
             </div>
 
             <div>
-              <Label>Company Name</Label>
+              <RequiredLabel>Company Name</RequiredLabel>
               <Input
                 name="companyName"
                 value={formData.companyName}
@@ -193,7 +207,7 @@ export default function Partner() {
             </div>
 
             <div>
-              <Label>Office Address</Label>
+              <RequiredLabel>Office Address</RequiredLabel>
               <Textarea
                 name="officeAddress"
                 rows={3}
@@ -221,7 +235,7 @@ export default function Partner() {
             </div>
 
             <div>
-              <Label>Company Presence</Label>
+              <RequiredLabel>Company Presence</RequiredLabel>
               <select
                 name="companyPresence"
                 value={formData.companyPresence}
@@ -248,7 +262,7 @@ export default function Partner() {
             </div>
 
             <div>
-              <Label>Physical Presence</Label>
+              <RequiredLabel>Physical Presence</RequiredLabel>
               <Input
                 name="physicalPresence"
                 value={formData.physicalPresence}
@@ -258,7 +272,7 @@ export default function Partner() {
 
             {/* Services */}
             <div>
-              <Label className="mb-4 block">Type of Product / Service</Label>
+              <RequiredLabel className="mb-4 block">Type of Product / Service</RequiredLabel>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {serviceOptions.map((service) => (
                   <label
@@ -278,7 +292,7 @@ export default function Partner() {
             </div>
 
             <div>
-              <Label>Catalogue Link</Label>
+              <RequiredLabel>Catalogue Link</RequiredLabel>
               <Input
                 name="catalogue"
                 value={formData.catalogue}
@@ -296,7 +310,7 @@ export default function Partner() {
             </div>
 
             <div>
-              <Label>Previous Work Samples</Label>
+              <RequiredLabel>Previous Work Samples</RequiredLabel>
               <Textarea
                 name="previousWork"
                 rows={3}
@@ -306,7 +320,7 @@ export default function Partner() {
             </div>
 
             <div>
-              <Label>How did you come to know about us?</Label>
+              <RequiredLabel>How did you come to know about us?</RequiredLabel>
               <Input
                 name="referenceSource"
                 value={formData.referenceSource}
