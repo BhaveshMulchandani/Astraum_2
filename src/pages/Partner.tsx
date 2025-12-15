@@ -43,6 +43,16 @@ export default function Partner() {
     email: "",
     phone: "",
     message: "",
+    companyName: "",
+    officeAddress: "",
+    website: "",
+    socialMedia: "",
+    companyPresence: "",
+    physicalPresence: "",
+    productType: "",
+    catalogue: "",
+    previousWork: "",
+    referenceSource: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -50,14 +60,17 @@ const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setIsSubmitting(true);
 
-  const fd = new FormData();
-  fd.append("formType", "Partner");  // IMPORTANT
-  fd.append("name", formData.name);
-  fd.append("email", formData.email);
-  fd.append("phone", formData.phone);
-  fd.append("message", formData.message);
-
   try {
+    const fd = new FormData();
+
+    // identify which form
+    fd.append("formType", "Vendor");
+
+    // append ALL fields dynamically
+    Object.entries(formData).forEach(([key, value]) => {
+      fd.append(key, value);
+    });
+
     const res = await fetch(WEB_URL, {
       method: "POST",
       body: fd,
@@ -71,7 +84,23 @@ const handleSubmit = async (e: React.FormEvent) => {
       description: "We will contact you soon.",
     });
 
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    // reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+      companyName: "",
+      officeAddress: "",
+      website: "",
+      socialMedia: "",
+      companyPresence: "",
+      physicalPresence: "",
+      productType: "",
+      catalogue: "",
+      previousWork: "",
+      referenceSource: "",
+    });
 
   } catch (error) {
     console.error(error);
@@ -80,9 +109,9 @@ const handleSubmit = async (e: React.FormEvent) => {
       description: "Something went wrong.",
       variant: "destructive",
     });
+  } finally {
+    setIsSubmitting(false);
   }
-
-  setIsSubmitting(false);
 };
 
 
@@ -217,6 +246,169 @@ const handleSubmit = async (e: React.FormEvent) => {
                     required
                     rows={6}
                     className="bg-card border-border focus:border-primary resize-none"
+                  />
+                </div>
+
+                
+                <div>
+                  <Label
+                    htmlFor="companyName"
+                    className="text-foreground mb-2 block"
+                  >
+                    Company Name
+                  </Label>
+                  <Input
+                    id="companyName"
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={handleChange}
+                    className="h-12 bg-card border-border focus:border-primary"
+                  />
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="officeAddress"
+                    className="text-foreground mb-2 block"
+                  >
+                    Office Address
+                  </Label>
+                  <Textarea
+                    id="officeAddress"
+                    name="officeAddress"
+                    value={formData.officeAddress}
+                    onChange={handleChange}
+                    rows={3}
+                    className="bg-card border-border focus:border-primary resize-none"
+                  />
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="website"
+                    className="text-foreground mb-2 block"
+                  >
+                    Website
+                  </Label>
+                  <Input
+                    id="website"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleChange}
+                    className="h-12 bg-card border-border focus:border-primary"
+                  />
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="socialMedia"
+                    className="text-foreground mb-2 block"
+                  >
+                    Social Media Link
+                  </Label>
+                  <Input
+                    id="socialMedia"
+                    name="socialMedia"
+                    value={formData.socialMedia}
+                    onChange={handleChange}
+                    className="h-12 bg-card border-border focus:border-primary"
+                  />
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="companyPresence"
+                    className="text-foreground mb-2 block"
+                  >
+                    Company Presence (Cities / Countries)
+                  </Label>
+                  <Input
+                    id="companyPresence"
+                    name="companyPresence"
+                    value={formData.companyPresence}
+                    onChange={handleChange}
+                    className="h-12 bg-card border-border focus:border-primary"
+                  />
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="physicalPresence"
+                    className="text-foreground mb-2 block"
+                  >
+                    Physical Presence
+                  </Label>
+                  <Input
+                    id="physicalPresence"
+                    name="physicalPresence"
+                    value={formData.physicalPresence}
+                    onChange={handleChange}
+                    className="h-12 bg-card border-border focus:border-primary"
+                  />
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="productType"
+                    className="text-foreground mb-2 block"
+                  >
+                    Type of Product / Services
+                  </Label>
+                  <Input
+                    id="productType"
+                    name="productType"
+                    value={formData.productType}
+                    onChange={handleChange}
+                    className="h-12 bg-card border-border focus:border-primary"
+                  />
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="catalogue"
+                    className="text-foreground mb-2 block"
+                  >
+                    Catalogue (Drive / PDF Link)
+                  </Label>
+                  <Input
+                    id="catalogue"
+                    name="catalogue"
+                    value={formData.catalogue}
+                    onChange={handleChange}
+                    className="h-12 bg-card border-border focus:border-primary"
+                  />
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="previousWork"
+                    className="text-foreground mb-2 block"
+                  >
+                    Previous Work Sample Links
+                  </Label>
+                  <Textarea
+                    id="previousWork"
+                    name="previousWork"
+                    value={formData.previousWork}
+                    onChange={handleChange}
+                    rows={3}
+                    className="bg-card border-border focus:border-primary resize-none"
+                  />
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="referenceSource"
+                    className="text-foreground mb-2 block"
+                  >
+                    How did you come to know about us?
+                  </Label>
+                  <Input
+                    id="referenceSource"
+                    name="referenceSource"
+                    value={formData.referenceSource}
+                    onChange={handleChange}
+                    className="h-12 bg-card border-border focus:border-primary"
                   />
                 </div>
                 <Button
