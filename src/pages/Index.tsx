@@ -124,7 +124,7 @@ export default function Index() {
               className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0"
               style={{ animationDelay: "800ms" }}
             >
-              <Button variant="outline-light" size="lg" asChild>
+              <Button variant="gold" size="lg" asChild>
                 <Link to="/work">
                   View Our Work
                   <ArrowRight className="ml-2 h-4 w-4" />
