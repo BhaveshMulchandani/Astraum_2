@@ -212,12 +212,7 @@ export default function Vendor() {
                 <option value="More than 10 years">More than 10 years</option>
               </select>
             </div>
-
-            <div>
-              <RequiredLabel>Physical Presence</RequiredLabel>
-              <Input name="physicalPresence" value={formData.physicalPresence} onChange={handleChange} />
-            </div>
-
+            
             {/* Services */}
             <div>
               <RequiredLabel className="mb-4 block">Type of Product / Service</RequiredLabel>
