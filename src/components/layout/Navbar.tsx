@@ -44,7 +44,7 @@ export function Navbar() {
     >
       <nav className="container-luxury flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-display text-2xl font-semibold tracking-tight text-foreground">
+          <span className="font-display text-2xl font-semibold tracking-tight text-primary">
             Astraum
           </span>
           <span className="text-primary font-display text-2xl">Infrastructures</span>

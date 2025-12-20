@@ -11,10 +11,18 @@ import { useToast } from "@/components/ui/use-toast";
 
 export default function Contact() {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    service: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -31,7 +39,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     description: "Thank you for contacting us. We'll get back to you soon.",
   });
 
-  setFormData({ name: "", email: "", phone: "", message: "" });
+  setFormData({ name: "", email: "", phone: "", message: "", service: "" });
   setIsSubmitting(false);
 };
 
@@ -139,7 +147,7 @@ return (
 
     <section>
       <div className="flex justify-center">
-        <div className="w-full max-w-xl bg-background rounded-lg shadow-lg p-8 mb-16">
+        <div className="w-full max-w-xl bg-background rounded-lg shadow-lg p-8 mt-16 mb-8">
           <h2 className="font-display text-2xl md:text-3xl font-medium text-foreground mb-8 text-center">
             Send Us a Message
           </h2>
@@ -158,6 +166,28 @@ return (
                 required
                 className="h-12 bg-card border-border focus:border-primary"
               />
+            </div>
+            <div>
+              <Label htmlFor="service" className="text-foreground mb-2 block">
+                Service Interested In
+              </Label>
+              <select
+                id="service"
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                required
+                className="h-12 w-full bg-card border border-border rounded-md px-3 py-2 focus:outline-none focus:border-primary text-foreground"
+              >
+                <option value="" disabled>
+                  Select a service
+                </option>
+                <option value="Design Consultant">Design Consultant</option>
+                <option value="Interior Fitout">Interior Fitout</option>
+                <option value="Commercial Interior Design">Commercial Interior Design</option>
+                <option value="Residential Interior Design">Residential Interior Design</option>
+                <option value="Landscaping & Horticulture">Landscaping & Horticulture</option>
+              </select>
             </div>
             <div>
               <Label htmlFor="email" className="text-foreground mb-2 block">
