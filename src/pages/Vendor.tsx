@@ -240,7 +240,7 @@ export default function Vendor() {
             </div>
 
             <div>
-              <RequiredLabel>Catalogue Link</RequiredLabel>
+              <Label>Catalogue Link</Label>
               <Input name="catalogue" value={formData.catalogue} onChange={handleChange} />
             </div>
 
