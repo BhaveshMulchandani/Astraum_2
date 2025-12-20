@@ -18,22 +18,26 @@ const values = [
   {
     icon: Sparkles,
     title: "Quality",
-    description: "We deliver interiors built with care, using thoughtful material selection and meticulous craftsmanship from start to finish.",
+    description:
+      "We deliver interiors built with care, using thoughtful material selection and meticulous craftsmanship from start to finish.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "We work closely with our clients at every step, ensuring their vision shapes each design decision and final outcome.",
+    description:
+      "We work closely with our clients at every step, ensuring their vision shapes each design decision and final outcome.",
   },
   {
     icon: Clock,
     title: "Timeliness",
-    description: "We value your time and manage each project with precision, delivering interiors on schedule without compromising quality.",
+    description:
+      "We value your time and manage each project with precision, delivering interiors on schedule without compromising quality.",
   },
   {
     icon: Award,
     title: "Innovation",
-    description: "We innovate & embrace new ideas, technologies, and sustainable design practices to create spaces that feel current, functional, and future-ready.",
+    description:
+      "We innovate & embrace new ideas, technologies, and sustainable design practices to create spaces that feel current, functional, and future-ready.",
   },
 ];
 
@@ -56,7 +60,10 @@ const team = [
 ];
 
 const achievements = [
-  { year: "2023", title: "Best Interior Design Studio - Design Excellence Awards" },
+  {
+    year: "2023",
+    title: "Best Interior Design Studio - Design Excellence Awards",
+  },
   { year: "2022", title: "Luxury Residential Design of the Year" },
   { year: "2021", title: "Innovation in Commercial Design Award" },
   { year: "2020", title: "Sustainable Design Excellence" },
@@ -83,7 +90,8 @@ export default function About() {
             Designing Spaces with Purpose
           </h1>
           <p className="text-accent-foreground/80 text-lg md:text-xl max-w-2xl mx-auto animate-fade-up animation-delay-400">
-            Specialising in residential interior design, commercial interiors, and turnkey fitout services across India and the UAE.
+            Specialising in residential interior design, commercial interiors,
+            and turnkey fitout services across India and the UAE.
           </p>
         </div>
       </section>
@@ -117,15 +125,27 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                 Astraum Infra, in partnership with KI Dubai, brings seven years of Dubai design expertise to residential and commercial interior design and turnkey fitouts across India and the UAE. What began as a collaboration between two design-driven studios has grown into a multidisciplinary team delivering thoughtful layouts, detailed 3D visualisations, and seamless on-site execution.
+                  Astraum Infra, in partnership with KI Dubai, brings seven
+                  years of Dubai design expertise to residential and commercial
+                  interior design and turnkey fitouts across India and the UAE.
+                  What began as a collaboration between two design-driven
+                  studios has grown into a multidisciplinary team delivering
+                  thoughtful layouts, detailed 3D visualisations, and seamless
+                  on-site execution.
                 </p>
                 <p>
-                  We combine global design sensibilities with local context, creating spaces that balance comfort, function, and refined aesthetics. From private homes and villas to offices, hospitality spaces, and boutique commercial projects, our work is shaped by skilled craftsmanship, transparent project delivery, and a commitment to creating interiors that feel lasting and truly lived in.
+                  We combine global design sensibilities with local context,
+                  creating spaces that balance comfort, function, and refined
+                  aesthetics. From private homes and villas to offices,
+                  hospitality spaces, and boutique commercial projects, our work
+                  is shaped by skilled craftsmanship, transparent project
+                  delivery, and a commitment to creating interiors that feel
+                  lasting and truly lived in.
                 </p>
                 <p>
-                  Today, our team of talented designers, architects, and project managers 
-                  continues to push boundaries, creating spaces that are both beautiful 
-                  and functional.
+                  Today, our team of talented designers, architects, and project
+                  managers continues to push boundaries, creating spaces that
+                  are both beautiful and functional.
                 </p>
               </div>
             </div>
@@ -158,7 +178,12 @@ export default function About() {
                 Our Mission
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Our mission is to deliver high-quality turnkey fitout and interior design services for residential and commercial spaces, creating interiors that balance functionality, comfort, and timeless style. We bring every vision to life with clarity and care by focusing on thoughtful space planning, sustainable materials, and a client-first design approach.
+                Our mission is to deliver high-quality turnkey fitout and
+                interior design services for residential and commercial spaces,
+                creating interiors that balance functionality, comfort, and
+                timeless style. We bring every vision to life with clarity and
+                care by focusing on thoughtful space planning, sustainable
+                materials, and a client-first design approach.
               </p>
             </div>
             <div className="bg-card p-10 rounded-lg shadow-soft">
@@ -166,15 +191,18 @@ export default function About() {
                 Our Vision
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-               Now
- To lead in crafting personalised, transformative interior experiences that improve everyday living through thoughtful residential and commercial design and meticulous execution.
-5 years
- To be recognised across the region as a trusted interior design firm, delivering considered residential and commercial projects that genuinely enhance how people live and work.
-10 years
- To set new standards in design leadership by advancing sustainable practice, refined craftsmanship, and exceptional client experience across turnkey fitouts and bespoke interiors.
-15 years
- To be a globally respected design studio known for timeless interiors, outstanding craftsmanship, and projects that inspire and empower communities everywhere.
-
+                Now To lead in crafting personalised, transformative interior
+                experiences that improve everyday living through thoughtful
+                residential and commercial design and meticulous execution. 5
+                years To be recognised across the region as a trusted interior
+                design firm, delivering considered residential and commercial
+                projects that genuinely enhance how people live and work. 10
+                years To set new standards in design leadership by advancing
+                sustainable practice, refined craftsmanship, and exceptional
+                client experience across turnkey fitouts and bespoke interiors.
+                15 years To be a globally respected design studio known for
+                timeless interiors, outstanding craftsmanship, and projects that
+                inspire and empower communities everywhere.
               </p>
             </div>
           </div>
@@ -221,7 +249,7 @@ export default function About() {
               Meet the Experts
             </h2>
             <p className="text-muted-foreground text-lg">
-              A talented team of designers and professionals passionate about 
+              A talented team of designers and professionals passionate about
               creating beautiful spaces.
             </p>
           </div>
@@ -257,8 +285,8 @@ export default function About() {
                 Awards & Achievements
               </h2>
               <p className="text-accent-foreground/70 text-lg leading-relaxed mb-8">
-                Our commitment to excellence has been recognized by industry leaders 
-                and design organizations worldwide.
+                Our commitment to excellence has been recognized by industry
+                leaders and design organizations worldwide.
               </p>
               <Button variant="outline-light" size="lg" asChild>
                 <Link to="/work">
