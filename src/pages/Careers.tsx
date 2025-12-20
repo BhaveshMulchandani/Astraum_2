@@ -65,9 +65,9 @@ const culturePoints = [
 
 export default function Careers() {
   const { toast } = useToast();
-  const [selectedJob, setSelectedJob] = useState<(typeof jobs)[0] | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formData, setFormData] = useState({
+    position: "",
     name: "",
     email: "",
     phone: "",
@@ -76,29 +76,58 @@ export default function Careers() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleApply = (job: (typeof jobs)[0]) => {
-    setSelectedJob(job);
-    setIsDialogOpen(true);
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  try {
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbzQJVkaqJx5ka2WnTWR90eVdq21Vl6-ou3BqmWamcd8_9fp3Kb17tYyXUJdzGG-ZkAgxw/exec",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formData).toString(),
+      }
+    );
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const result = await response.json();
 
+    if (result.ok) {
+      toast({
+        title: "Application Submitted!",
+        description:
+          "Thank you for your interest. We'll review your application and get back to you soon.",
+      });
+
+      setFormData({
+        position: "",
+        name: "",
+        email: "",
+        phone: "",
+        portfolio: "",
+        message: "",
+      });
+
+      setIsDialogOpen(false);
+    } else {
+      throw new Error(result.error);
+    }
+  } catch (error) {
     toast({
-      title: "Application Submitted!",
-      description: "Thank you for your interest. We'll review your application and get back to you soon.",
+      title: "Submission Failed",
+      description: "Something went wrong. Please try again later.",
+      variant: "destructive",
     });
-
-    setFormData({ name: "", email: "", phone: "", portfolio: "", message: "" });
-    setIsDialogOpen(false);
+  } finally {
     setIsSubmitting(false);
-  };
+  }
+};
+
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -192,10 +221,6 @@ export default function Careers() {
                       </span>
                     </div>
                   </div>
-                  <Button variant="gold" onClick={() => handleApply(job)}>
-                    Apply Now
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
                 </div>
                 <p className="text-muted-foreground mb-4">{job.description}</p>
                 <div>
@@ -209,6 +234,12 @@ export default function Careers() {
               </div>
             ))}
           </div>
+          <div className="flex justify-center mt-10">
+            <Button variant="gold" size="lg" onClick={() => setIsDialogOpen(true)}>
+              Apply Now
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -217,13 +248,30 @@ export default function Careers() {
         <DialogContent className="sm:max-w-[500px] bg-card">
           <DialogHeader>
             <DialogTitle className="font-display text-2xl">
-              Apply for {selectedJob?.title}
+              Apply for a Position
             </DialogTitle>
             <DialogDescription>
               Fill out the form below and we'll get back to you soon.
             </DialogDescription>
           </DialogHeader>
           <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+            <div>
+              <Label htmlFor="apply-position">Position</Label>
+              <select
+                id="apply-position"
+                name="position"
+                value={formData.position}
+                onChange={handleChange}
+                required
+                className="mt-1 h-12 w-full bg-card border border-border rounded-md px-3 py-2 focus:outline-none focus:border-primary text-foreground"
+              >
+                <option value="" disabled>Select a position</option>
+                {jobs.map(job => (
+                  <option key={job.id} value={job.title}>{job.title}</option>
+                ))}
+                <option value="Other">Other</option>
+              </select>
+            </div>
             <div>
               <Label htmlFor="apply-name">Full Name</Label>
               <Input

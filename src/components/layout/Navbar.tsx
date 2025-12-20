@@ -47,7 +47,7 @@ export function Navbar() {
           <span className="font-display text-2xl font-semibold tracking-tight text-primary">
             Astraum
           </span>
-          <span className="text-primary font-display text-2xl">Infrastructures</span>
+          <span className="text-primary font-display text-2xl">Infrastructure</span>
         </Link>
 
         {/* Desktop Navigation */}

@@ -59,10 +59,10 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-6">
               <span className="font-display text-2xl font-semibold tracking-tight">
-                Élégance
+                Astraum
               </span>
               <span className="text-primary font-display text-2xl ml-1">
-                Interiors
+                Infrastructure
               </span>
             </Link>
             <p className="text-accent-foreground/70 mb-6 leading-relaxed">
