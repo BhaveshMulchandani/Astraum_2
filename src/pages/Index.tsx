@@ -18,10 +18,10 @@ import project4 from "@/assets/project-4.jpg";
 
 const services = [
   {
-    icon: Palette,
-    title: "Design Consultant",
+    icon: TreePine,
+    title: "Landscaping",
     description:
-      "Every project starts with the right direction. Our interior design consultation helps us understand your goals, lifestyle, and aesthetic preferences before offering expert guidance. This process sets a clear, confident foundation for your interior design project.",
+      "We design calm, well-planned outdoor spaces that align with your home’s interior style. Through thoughtful planting and spatial planning, our landscape design solutions make outdoor living areas inviting, balanced, and easy to enjoy.",
   },
   {
     icon: Building2,
@@ -36,10 +36,10 @@ const services = [
       "We create cozy, practical homes that feel effortless and personal. Every element, from layout and lighting to textures and flow, is thoughtfully designed to suit your lifestyle and enhance everyday living through residential interior design.",
   },
   {
-    icon: TreePine,
-    title: "Landscaping",
+    icon: Palette,
+    title: "Design Consulting",
     description:
-      "We design calm, well-planned outdoor spaces that align with your home’s interior style. Through thoughtful planting and spatial planning, our landscape design solutions make outdoor living areas inviting, balanced, and easy to enjoy.",
+      "Every project starts with the right direction. Our interior design consultation helps us understand your goals, lifestyle, and aesthetic preferences before offering expert guidance. This process sets a clear, confident foundation for your interior design project.",
   },
 ];
 

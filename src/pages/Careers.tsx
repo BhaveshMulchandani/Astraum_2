@@ -17,34 +17,22 @@ import {
 const jobs = [
   {
     id: 1,
-    title: "Senior Interior Designer",
-    location: "New York, NY",
+    title: "Business Development manager",
+    location: "India, IND",
     type: "Full-time",
-    description: "We're looking for an experienced interior designer to lead residential and commercial projects from concept to completion.",
+    description: "We're looking for an experienced business development manager to lead residential and commercial projects from concept to completion.",
     requirements: [
-      "5+ years of interior design experience",
+      "5+ years of Business Development Experience",
       "Proficiency in AutoCAD, SketchUp, and Adobe Creative Suite",
       "Strong portfolio demonstrating design excellence",
       "Excellent client communication skills",
     ],
   },
-  {
-    id: 2,
-    title: "Junior Designer",
-    location: "New York, NY",
-    type: "Full-time",
-    description: "An exciting opportunity for a talented junior designer to grow their skills in a supportive, creative environment.",
-    requirements: [
-      "Bachelor's degree in Interior Design or related field",
-      "1-2 years of relevant experience or internship",
-      "Knowledge of design software",
-      "Strong attention to detail",
-    ],
-  },
+
   {
     id: 3,
     title: "Project Manager",
-    location: "New York, NY",
+    location: "India, Ind",
     type: "Full-time",
     description: "Oversee the execution of interior design projects, ensuring timely delivery and client satisfaction.",
     requirements: [
@@ -52,19 +40,6 @@ const jobs = [
       "Background in interior design or construction",
       "Excellent organizational skills",
       "Strong leadership abilities",
-    ],
-  },
-  {
-    id: 4,
-    title: "3D Visualization Artist",
-    location: "Remote",
-    type: "Contract",
-    description: "Create stunning 3D renderings and visualizations to bring design concepts to life for our clients.",
-    requirements: [
-      "Expertise in 3ds Max, V-Ray, or similar software",
-      "Strong portfolio of architectural visualizations",
-      "Attention to lighting and material details",
-      "Ability to work independently",
     ],
   },
 ];

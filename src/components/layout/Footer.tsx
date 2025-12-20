@@ -178,7 +178,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-accent-foreground/50">
             <p>© 2024 Élégance Interiors. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link
+              {/* <Link
                 to="#"
                 className="hover:text-accent-foreground transition-colors"
               >
@@ -189,7 +189,7 @@ export function Footer() {
                 className="hover:text-accent-foreground transition-colors"
               >
                 Terms of Service
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

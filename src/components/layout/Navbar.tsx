@@ -11,7 +11,7 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Careers", path: "/careers" },
   // { name: "Contact", path: "/contact" },
-  { name: "Partner with us", path: "/partnerwithus" },
+  // { name: "Partner with us", path: "/partnerwithus" },
   { name: "Vendor Registration", path: "/vendorregistration" },
 
 ];
@@ -45,9 +45,9 @@ export function Navbar() {
       <nav className="container-luxury flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <span className="font-display text-2xl font-semibold tracking-tight text-foreground">
-            Élégance
+            Astraum
           </span>
-          <span className="text-primary font-display text-2xl">Interiors</span>
+          <span className="text-primary font-display text-2xl">Infrastructures</span>
         </Link>
 
         {/* Desktop Navigation */}

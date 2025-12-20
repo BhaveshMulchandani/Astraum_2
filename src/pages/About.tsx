@@ -274,7 +274,7 @@ export default function About() {
       </section>
 
       {/* Achievements Section */}
-      <section className="section-padding bg-accent">
+      {/* <section className="section-padding bg-accent">
         <div className="container-luxury">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -310,7 +310,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 }

@@ -250,12 +250,7 @@ export default function Vendor() {
             </div>
 
             <div>
-              <RequiredLabel>Previous Work Samples</RequiredLabel>
-              <Textarea name="previousWork" rows={3} value={formData.previousWork} onChange={handleChange} />
-            </div>
-
-            <div>
-              <RequiredLabel>How did you come to know about us?</RequiredLabel>
+              <Label>How did you come to know about us?</Label>
               <Input name="referenceSource" value={formData.referenceSource} onChange={handleChange} />
             </div>
 
