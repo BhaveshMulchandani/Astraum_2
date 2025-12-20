@@ -221,7 +221,7 @@ export default function Index() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button variant="luxury" size="lg" asChild>
+            <Button variant="gold" size="lg" asChild>
               <Link to="/work">
                 View All Projects
                 <ArrowRight className="ml-2 h-4 w-4" />
