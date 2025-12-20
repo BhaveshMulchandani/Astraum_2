@@ -125,7 +125,7 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Astraum infra and Astraum Middle east, in partnership with KI Dubai, brings seven
+                  Astraum infra and Astraum Middle east,brings seven
                   years of Dubai design expertise to residential and commercial
                   interior design and turnkey fitouts across India and the UAE.
                   What began as a collaboration between two design-driven
