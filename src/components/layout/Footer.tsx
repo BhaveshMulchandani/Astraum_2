@@ -71,7 +71,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/astraum_ai?igsh=bm9wYnNncnZoZG85&utm_source=ig_contact_invite"
                 className="w-10 h-10 rounded-full border border-accent-foreground/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors duration-300"
                 aria-label="Instagram"
               >
@@ -144,7 +144,7 @@ export function Footer() {
                   className="flex items-center gap-3 text-accent-foreground/70 hover:text-primary transition-colors duration-300"
                 >
                   <Phone size={18} />
-                  <span>+91-9808983333</span>
+                  <span>+91-9808983333,+971-524899993</span>
                 </a>
               </li>
               <li>
@@ -163,7 +163,7 @@ export function Footer() {
                     Office #410 <br />
                     Naxtra By Kavyaratna <br />
                     Sargasan Croass Road, Below The Fern Residency . <br />
-                    Gandhinagar, Gujarat{" "}
+                    India.
                   </span>
                 </div>
               </li>
@@ -176,7 +176,7 @@ export function Footer() {
       <div className="border-t border-accent-foreground/10">
         <div className="container-luxury py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-accent-foreground/50">
-            <p>© 2024 Élégance Interiors. All rights reserved.</p>
+            <p>© 2024 Astraum Infrastructure . All rights reserved.</p>
             <div className="flex gap-6">
               <p>Designed by Sosiyo</p>
             </div>

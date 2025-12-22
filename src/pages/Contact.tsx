@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import office from "../assets/office.avif";
+import dubai_office from "../assets/dubai_office.jpeg"
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -109,10 +110,10 @@ export default function Contact() {
             <p className="text-foreground text-2xl mb-4">11:23 am</p>
 
             <a
-              href="mailto:newyork@pentagram.com"
+              href="mailto:info@astraumai.com"
               className="text-primary underline block"
             >
-              newyork@pentagram.com
+              info@astraumai.com
             </a>
 
             <p className="text-foreground mb-2">+91-9808983333</p>
@@ -137,7 +138,7 @@ export default function Contact() {
 
           <div>
             <img
-              src={office}
+              src={dubai_office}
               alt="office"
               className="w-full h-[400px] object-cover"
             />
@@ -149,13 +150,13 @@ export default function Contact() {
             <p className="text-foreground text-2xl mb-4">11:23 am</p>
 
             <a
-              href="mailto:newyork@pentagram.com"
+              href="mailto:info@astraumai.com"
               className="text-primary underline block"
             >
-              newyork@pentagram.com
+              info@astraumai.com
             </a>
 
-            <p className="text-foreground mb-2">+1 212 683 7000</p>
+            <p className="text-foreground mb-2">+971-524899993</p>
 
             {/* <p className="text-muted-foreground text-lg mb-6">
               Pentagram New York is in the top two floors of a 12-story building
@@ -164,9 +165,8 @@ export default function Contact() {
             </p> */}
 
             <p className="text-foreground mb-2">
-              250 Park Avenue South <br />
-              New York, NY 10003 <br />
-              United States
+              SUITE-B-30-159 <br />
+              SRTI BUILDING ,UAE
             </p>
 
             <a href="#" className="text-primary underline">
@@ -191,7 +191,6 @@ export default function Contact() {
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="John Doe"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -234,7 +233,6 @@ export default function Contact() {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="john@example.com"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -249,7 +247,6 @@ export default function Contact() {
                   id="phone"
                   name="phone"
                   type="tel"
-                  placeholder="+1 (234) 567-890"
                   value={formData.phone}
                   onChange={handleChange}
                   className="h-12 bg-card border-border focus:border-primary"
@@ -262,7 +259,6 @@ export default function Contact() {
                 <Textarea
                   id="message"
                   name="message"
-                  placeholder="Tell us about your project..."
                   value={formData.message}
                   onChange={handleChange}
                   required
