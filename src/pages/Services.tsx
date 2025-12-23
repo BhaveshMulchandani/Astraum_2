@@ -67,7 +67,7 @@ const services = [
       "Lighting design with layered illumination",
       "Color consultation and material selection",
       "Art, styling, and accessory curation",
-      "Renovation planning and space optimization for full-home projects"
+      "Renovation planning and space optimization for full-home projects",
     ],
   },
   {
@@ -99,7 +99,9 @@ export default function Services() {
               Comprehensive Interior Design Solutions
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed animate-fade-up animation-delay-400">
-              From concept to completion, we offer end-to-end residential and commercial interior design services that bring your vision to life with clarity and care.
+              From concept to completion, we offer end-to-end residential and
+              commercial interior design services that bring your vision to life
+              with clarity and care.
             </p>
           </div>
         </div>
@@ -111,6 +113,10 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={service.title}
+              id={service.title
+                .toLowerCase()
+                .replace(/ & /g, "-")
+                .replace(/\s+/g, "-")}
               className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24 last:mb-0 ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
@@ -171,7 +177,8 @@ export default function Services() {
               How We Work
             </h2>
             <p className="text-accent-foreground/70 text-lg">
-              A clear, end-to-end interior design process from concept to completion.
+              A clear, end-to-end interior design process from concept to
+              completion.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

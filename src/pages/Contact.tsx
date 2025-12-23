@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import india_office from "../assets/03.webp"
-import dubai_office from "../assets/dubai_office.jpeg"
+import india_office from "../assets/03.webp";
+import dubai_office from "../assets/dubai_office.jpeg";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -35,13 +35,16 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbz-h40G5hwGsfH1vMl7xZdut9O-31BRR0URprRsK8gJWXb4BZt8wc2DUaQ4KNaqQO7Y/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams(formData).toString(),
-      });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbz-h40G5hwGsfH1vMl7xZdut9O-31BRR0URprRsK8gJWXb4BZt8wc2DUaQ4KNaqQO7Y/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(formData).toString(),
+        }
+      );
 
       const result = await response.json();
 
@@ -73,19 +76,45 @@ export default function Contact() {
     }
   };
 
+  const [indiaTime, setIndiaTime] = useState("");
+const [dubaiTime, setDubaiTime] = useState("");
+
+const getTimeByZone = (timeZone) => {
+  return new Intl.DateTimeFormat("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+    timeZone,
+  }).format(new Date());
+};
+
+useEffect(() => {
+  const updateTime = () => {
+    setIndiaTime(getTimeByZone("Asia/Kolkata"));
+    setDubaiTime(getTimeByZone("Asia/Dubai"));
+  };
+
+  updateTime(); // initial call
+  const interval = setInterval(updateTime, 1000);
+
+  return () => clearInterval(interval);
+}, []);
+
+
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-secondary">
-        <div className="container-luxury">
+      <section className="relative pt-24 pb-16 bg-secondary">
+        <div className="container-luxury px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium tracking-widest uppercase mb-4 animate-fade-up">
               Our Offices
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-6 animate-fade-up animation-delay-200">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-6 animate-fade-up animation-delay-200">
               Visit Us
             </h1>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed animate-fade-up animation-delay-400">
+            <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed animate-fade-up animation-delay-400">
               Explore our global locations and learn more about the spaces where
               creativity happens.
             </p>
@@ -95,81 +124,76 @@ export default function Contact() {
 
       {/* IMAGES ROW */}
       <section className="bg-background pb-12 mt-10">
-        <div className="container-luxury grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <img
-              src={india_office}
-              alt="office"
-              className="w-full h-[400px] object-cover"
-            />
-
-            <h2 className="font-display text-4xl mb-2 text-foreground">
+        <div className="container-luxury grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-6 px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 md:mb-0 flex flex-col items-center md:items-start">
+            <div className="w-full aspect-[4/3] overflow-hidden">
+              <img
+                src={india_office}
+                alt="India Office"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl mb-2 text-foreground mt-4 text-center md:text-left">
               India
             </h2>
-
-            <p className="text-foreground text-2xl mb-4">11:23 am</p>
-
+            <p className="text-foreground text-lg sm:text-xl md:text-2xl mb-4 text-center md:text-left">
+              {indiaTime}
+            </p>
             <a
               href="mailto:info@astraumai.com"
-              className="text-primary underline block"
+              className="text-primary underline block text-center md:text-left"
             >
               info@astraumai.com
             </a>
-
-            <p className="text-foreground mb-2">+91-9808983333</p>
-
-            {/* <p className="text-muted-foreground text-lg mb-6">
-              Pentagram New York is in the top two floors of a 12-story building
-              located on the border of Manhattan’s Flatiron District and the
-              Union Square neighborhood.
-            </p> */}
-
-            <p className="text-foreground mb-2">
+            <p className="text-foreground mb-2 text-center md:text-left">
+              +91-9808983333
+            </p>
+            <p className="text-foreground mb-2 text-center md:text-left">
               Office #410 <br />
               Naxtra By Kavyaratna <br />
-              Sargasan Croass Road, Below The Fern Residency,<br />
-              India
+              Sargasan Croass Road, Below The Fern
+              Residency,Gandhinagar,Gujarat,
+              <br />
+              India .
             </p>
-
-            <a href="https://maps.app.goo.gl/3GN9z45NKP4D2ATR8" className="text-primary underline">
+            <a
+              href="https://maps.app.goo.gl/3GN9z45NKP4D2ATR8"
+              className="text-primary underline text-center md:text-left"
+            >
               Get directions
             </a>
           </div>
-
-          <div>
-            <img
-              src={dubai_office}
-              alt="office"
-              className="w-full h-[400px] object-cover"
-            />
-
-            <h2 className="font-display text-4xl mb-2 text-foreground">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="w-full aspect-[4/3] overflow-hidden">
+              <img
+                src={dubai_office}
+                alt="Dubai Office"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl mb-2 text-foreground mt-4 text-center md:text-left">
               Dubai, UAE
             </h2>
-
-            <p className="text-foreground text-2xl mb-4">11:23 am</p>
-
+            <p className="text-foreground text-lg sm:text-xl md:text-2xl mb-4 text-center md:text-left">
+              {dubaiTime}
+            </p>
             <a
               href="mailto:info@astraumai.com"
-              className="text-primary underline block"
+              className="text-primary underline block text-center md:text-left"
             >
               info@astraumai.com
             </a>
-
-            <p className="text-foreground mb-2">+971-524899993</p>
-
-            {/* <p className="text-muted-foreground text-lg mb-6">
-              Pentagram New York is in the top two floors of a 12-story building
-              located on the border of Manhattan’s Flatiron District and the
-              Union Square neighborhood.
-            </p> */}
-
-            <p className="text-foreground mb-2">
+            <p className="text-foreground mb-2 text-center md:text-left">
+              +971-524899993
+            </p>
+            <p className="text-foreground mb-2 text-center md:text-left">
               SUITE-B-30-159 <br />
               SRTI BUILDING ,UAE
             </p>
-
-            <a href="https://maps.app.goo.gl/ZJFszasERdGxfk3b7" className="text-primary underline">
+            <a
+              href="https://maps.app.goo.gl/ZJFszasERdGxfk3b7"
+              className="text-primary underline text-center md:text-left"
+            >
               Get directions
             </a>
           </div>
@@ -177,12 +201,12 @@ export default function Contact() {
       </section>
 
       <section>
-        <div className="flex justify-center">
-          <div className="w-full max-w-xl bg-background rounded-lg shadow-lg p-8 mt-16 mb-8">
-            <h2 className="font-display text-2xl md:text-3xl font-medium text-primary mb-8 text-center">
+        <div className="flex justify-center px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-xl bg-background rounded-lg shadow-lg p-4 sm:p-8 mt-12 sm:mt-16 mb-8">
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-medium text-primary mb-6 sm:mb-8 text-center">
               Send Us a Message
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
                 <Label htmlFor="name" className="text-foreground mb-2 block">
                   Full Name

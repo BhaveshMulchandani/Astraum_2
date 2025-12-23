@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import astraum from "../../assets/Astraum Logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -13,7 +14,6 @@ const navLinks = [
   // { name: "Contact", path: "/contact" },
   // { name: "Partner with us", path: "/partnerwithus" },
   { name: "Vendor Registration", path: "/vendorregistration" },
-
 ];
 
 export function Navbar() {
@@ -44,10 +44,13 @@ export function Navbar() {
     >
       <nav className="container-luxury flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
+          <img className="w-16 h-16" src={astraum} alt="logo" />
           <span className="font-display text-2xl font-semibold tracking-tight text-primary">
             Astraum
           </span>
-          <span className="text-primary font-display text-2xl">Infrastructure</span>
+          <span className="text-primary font-display text-2xl">
+            Infrastructure
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

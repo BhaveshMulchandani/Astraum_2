@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "react-router-dom";
 
 const quickLinks = [
   { name: "Home", path: "/" },
@@ -20,37 +21,42 @@ const quickLinks = [
 ];
 
 const services = [
-  "Design Consultant",
-  "Interior Fitout",
-  "Commercial Design",
-  "Residential Design",
-  "Landscaping",
+  { name: "Design Consultant", id: "design-consultant" },
+  { name: "Interior Fitout", id: "interior-fitout" },
+  { name: "Commercial Design", id: "commercial-interior-design" },
+  { name: "Residential Design", id: "residential-interior-design" },
+  { name: "Landscaping", id: "landscaping-horticulture" },
 ];
 
 export function Footer() {
+  const location = useLocation();
+  const isContactPage = location.pathname === "/contact";
+
   return (
     <footer className="bg-accent text-accent-foreground">
       {/* CTA Section */}
-      <div className="border-b border-accent-foreground/10">
-        <div className="container-luxury py-16 md:py-20">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left">
-              <h3 className="font-display text-3xl md:text-4xl font-medium mb-3">
-                Ready to Transform Your Space?
-              </h3>
-              <p className="text-accent-foreground/70 text-lg">
-                Let's create something extraordinary together.
-              </p>
+      {!isContactPage && (
+        <div className="border-b border-accent-foreground/10">
+          <div className="container-luxury py-16 md:py-20">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="text-center md:text-left">
+                <h3 className="font-display text-3xl md:text-4xl font-medium mb-3">
+                  Ready to Transform Your Space?
+                </h3>
+                <p className="text-accent-foreground/70 text-lg">
+                  Let's create something extraordinary together.
+                </p>
+              </div>
+              <Button variant="outline-light" size="lg" asChild>
+                <Link to="/contact" className="group">
+                  Start Your Project
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
             </div>
-            <Button variant="outline-light" size="lg" asChild>
-              <Link to="/contact" className="group">
-                Start Your Project
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Main Footer */}
       <div className="container-luxury py-16">
@@ -71,13 +77,13 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/astraum_ai?igsh=bm9wYnNncnZoZG85&utm_source=ig_contact_invite"
+                href="https://www.instagram.com/Astraum_ai"
                 className="w-10 h-10 rounded-full border border-accent-foreground/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="w-10 h-10 rounded-full border border-accent-foreground/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors duration-300"
                 aria-label="Facebook"
@@ -90,16 +96,16 @@ export function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
-              </a>
+              </a> */}
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="font-display text-lg font-medium mb-6">
               Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 flex flex-col items-center md:items-start">
               {quickLinks.map((link) => (
                 <li key={link.path}>
                   <Link
@@ -114,18 +120,18 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="font-display text-lg font-medium mb-6">
               Our Services
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 flex flex-col items-center md:items-start">
               {services.map((service) => (
-                <li key={service}>
+                <li key={service.id}>
                   <Link
-                    to="/services"
+                    to={`/services#${service.id}`}
                     className="text-accent-foreground/70 hover:text-primary transition-colors duration-300"
                   >
-                    {service}
+                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -133,15 +139,15 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="font-display text-lg font-medium mb-6">
               Get In Touch
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 flex flex-col items-center md:items-start">
               <li>
                 <a
                   href="tel:+91-9808983333"
-                  className="flex items-center gap-3 text-accent-foreground/70 hover:text-primary transition-colors duration-300"
+                  className="flex items-center gap-3 justify-center md:justify-start text-accent-foreground/70 hover:text-primary transition-colors duration-300"
                 >
                   <Phone size={18} />
                   <span>+91-9808983333</span>
@@ -149,7 +155,7 @@ export function Footer() {
 
                 <a
                   href="tel:+971-524899993"
-                  className="flex items-center gap-3 text-accent-foreground/70 hover:text-primary transition-colors duration-300"
+                  className="flex items-center gap-3 justify-center md:justify-start text-accent-foreground/70 hover:text-primary transition-colors duration-300"
                 >
                   <Phone size={18} />
                   <span>+971-524899993</span>
@@ -170,7 +176,9 @@ export function Footer() {
                   <span>
                     Office #410 <br />
                     Naxtra By Kavyaratna <br />
-                    Sargasan Croass Road, Below The Fern Residency . <br />
+                    Sargasan Croass Road, Below The Fern
+                    Residency,Gandhinagar,Gujarat,
+                    <br />
                     India.
                   </span>
                 </div>
@@ -190,7 +198,9 @@ export function Footer() {
                 href="https://www.sosiyo.com"
                 target="_blank"
                 rel="noopener noreferrer"
-              ></a>
+              >
+                Designed by sosiyo
+              </a>
             </div>
           </div>
         </div>
