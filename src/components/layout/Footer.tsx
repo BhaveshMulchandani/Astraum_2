@@ -144,12 +144,20 @@ export function Footer() {
                   className="flex items-center gap-3 text-accent-foreground/70 hover:text-primary transition-colors duration-300"
                 >
                   <Phone size={18} />
-                  <span>+91-9808983333,+971-524899993</span>
+                  <span>+91-9808983333</span>
+                </a>
+
+                <a
+                  href="tel:+971-524899993"
+                  className="flex items-center gap-3 text-accent-foreground/70 hover:text-primary transition-colors duration-300"
+                >
+                  <Phone size={18} />
+                  <span>+971-524899993</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:hello@eleganceinteriors.com"
+                  href="mailto:info@astraumai.com"
                   className="flex items-center gap-3 text-accent-foreground/70 hover:text-primary transition-colors duration-300"
                 >
                   <Mail size={18} />
@@ -178,7 +186,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-accent-foreground/50">
             <p>© 2024 Astraum Infrastructure . All rights reserved.</p>
             <div className="flex gap-6">
-              <p>Designed by Sosiyo</p>
+             <a href="www.sosiyo.com">Designed by Sosiyo</a>
             </div>
           </div>
         </div>

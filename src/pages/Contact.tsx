@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import office from "../assets/office.avif";
+import india_office from "../assets/03.webp"
 import dubai_office from "../assets/dubai_office.jpeg"
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -98,7 +98,7 @@ export default function Contact() {
         <div className="container-luxury grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <img
-              src={office}
+              src={india_office}
               alt="office"
               className="w-full h-[400px] object-cover"
             />
@@ -127,11 +127,11 @@ export default function Contact() {
             <p className="text-foreground mb-2">
               Office #410 <br />
               Naxtra By Kavyaratna <br />
-              Sargasan Croass Road, Below The Fern Residency . <br />
-              Gandhinagar, Gujarat
+              Sargasan Croass Road, Below The Fern Residency,<br />
+              India
             </p>
 
-            <a href="#" className="text-primary underline">
+            <a href="https://maps.app.goo.gl/3GN9z45NKP4D2ATR8" className="text-primary underline">
               Get directions
             </a>
           </div>
@@ -169,7 +169,7 @@ export default function Contact() {
               SRTI BUILDING ,UAE
             </p>
 
-            <a href="#" className="text-primary underline">
+            <a href="https://maps.app.goo.gl/ZJFszasERdGxfk3b7" className="text-primary underline">
               Get directions
             </a>
           </div>

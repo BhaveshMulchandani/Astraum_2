@@ -49,27 +49,6 @@ const projects = [
     category: "Landscaping",
     description: "A stunning outdoor living space with modern landscaping and fire features.",
   },
-  {
-    id: 6,
-    image: project1,
-    title: "Penthouse Suite",
-    category: "Residential",
-    description: "Luxurious penthouse with panoramic views and bespoke interior finishes.",
-  },
-  {
-    id: 7,
-    image: project2,
-    title: "Boutique Hotel Lobby",
-    category: "Commercial",
-    description: "An elegant hotel entrance that makes a lasting first impression.",
-  },
-  {
-    id: 8,
-    image: project3,
-    title: "Executive Office Suite",
-    category: "Fitout",
-    description: "A professional workspace designed for productivity and comfort.",
-  },
 ];
 
 export default function Work() {

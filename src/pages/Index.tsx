@@ -78,7 +78,7 @@ const whyChooseUs = [
 
 const testimonials = [
   {
-    text: "Élégance Interiors transformed our home beyond our wildest dreams. Their attention to detail and understanding of our vision was remarkable.",
+    text: "Astraum Infrastructure transformed our home beyond our wildest dreams. Their attention to detail and understanding of our vision was remarkable.",
     author: "Sarah Mitchell",
     role: "Homeowner",
   },
