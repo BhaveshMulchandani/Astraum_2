@@ -187,12 +187,10 @@ export function Footer() {
             <p>© 2024 Astraum Infrastructure . All rights reserved.</p>
             <div className="flex gap-6">
               <a
-                href="www.sosiyo.com"
+                href="https://www.sosiyo.com"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                Designed by Sosiyo
-              </a>
+              ></a>
             </div>
           </div>
         </div>
