@@ -186,7 +186,13 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-accent-foreground/50">
             <p>© 2024 Astraum Infrastructure . All rights reserved.</p>
             <div className="flex gap-6">
-             <a href="www.sosiyo.com">Designed by Sosiyo</a>
+              <a
+                href="www.sosiyo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Designed by Sosiyo
+              </a>
             </div>
           </div>
         </div>
