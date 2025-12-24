@@ -184,14 +184,16 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3 justify-center md:justify-start text-accent-foreground/70">
-                  <MapPin size={18} className="mt-1 flex-shrink-0" />
-                  <span>
+                <div
+                  className="flex gap-3 text-accent-foreground/70
+                items-center justify-center
+                md:items-start md:justify-start"
+                >
+                  <MapPin size={18} className="flex-shrink-0" />
+                  <span className="text-center md:text-left">
                     Office #410 <br />
                     Naxtra By Kavyaratna Sargasan Croass Road, Below The Fern
-                    Residency, Gandhinagar, Gujarat,
-                    <br />
-                    India.
+                    Residency, Gandhinagar, Gujarat, India.
                   </span>
                 </div>
               </li>
@@ -204,7 +206,7 @@ export function Footer() {
       <div className="border-t border-accent-foreground/10">
         <div className="container-luxury py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-accent-foreground/50">
-            <p>© 2024 Astraum Infrastructure . All rights reserved.</p>
+            <p>© 2025 Astraum Infrastructure . All rights reserved.</p>
             <div className="flex gap-6">
               <a
                 href="https://www.sosiyo.com"

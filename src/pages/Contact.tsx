@@ -150,9 +150,7 @@ export default function Contact() {
             <p className="text-foreground mb-2 text-center md:text-left">
               Office #410 <br />
               Naxtra By Kavyaratna Sargasan Croass Road, Below The Fern
-              Residency, Gandhinagar, Gujarat,
-              <br />
-              India .
+              Residency, Gandhinagar, Gujarat,India.
             </p>
             <a
               href="https://maps.app.goo.gl/3GN9z45NKP4D2ATR8"
