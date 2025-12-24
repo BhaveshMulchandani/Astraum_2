@@ -1,3 +1,4 @@
+import astraum from "../../assets/Astraum Logo.png";
 import { Link } from "react-router-dom";
 import {
   Phone,
@@ -63,14 +64,26 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
           {/* Brand */}
           <div className="lg:col-span-1 flex flex-col items-center md:items-start">
-            <Link to="/" className="inline-block mb-6">
-              <span className="font-display text-2xl font-semibold tracking-tight">
-                Astraum
-              </span>
-              <span className="text-primary font-display text-2xl ml-1">
-                Infrastructure
-              </span>
+            <Link
+              to="/"
+              className="flex items-center gap-3 mb-6 justify-center md:justify-start"
+            >
+              <img
+                src={astraum}
+                alt="Astraum Infrastructure Logo"
+                className="w-10 h-10 object-contain"
+              />
+
+              <div className="flex flex-col leading-tight">
+                <span className="font-display text-xl font-semibold tracking-tight text-primary">
+                  Astraum
+                </span>
+                <span className="font-display text-sm tracking-wide text-primary/80">
+                  Infrastructure
+                </span>
+              </div>
             </Link>
+
             <p className="text-accent-foreground/70 mb-6 leading-relaxed">
               Creating timeless interiors across homes and workspaces through
               thoughtful design and quality craftsmanship.
@@ -175,7 +188,8 @@ export function Footer() {
                   <MapPin size={18} className="mt-1 flex-shrink-0" />
                   <span>
                     Office #410 <br />
-                    Naxtra By Kavyaratna Sargasan Croass Road, Below The Fern Residency, Gandhinagar, Gujarat,
+                    Naxtra By Kavyaratna Sargasan Croass Road, Below The Fern
+                    Residency, Gandhinagar, Gujarat,
                     <br />
                     India.
                   </span>
