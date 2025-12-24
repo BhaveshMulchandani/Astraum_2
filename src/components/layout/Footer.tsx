@@ -60,9 +60,9 @@ export function Footer() {
 
       {/* Main Footer */}
       <div className="container-luxury py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 flex flex-col items-center md:items-start">
             <Link to="/" className="inline-block mb-6">
               <span className="font-display text-2xl font-semibold tracking-tight">
                 Astraum
@@ -171,13 +171,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-accent-foreground/70">
+                <div className="flex items-start gap-3 justify-center md:justify-start text-accent-foreground/70">
                   <MapPin size={18} className="mt-1 flex-shrink-0" />
                   <span>
                     Office #410 <br />
-                    Naxtra By Kavyaratna <br />
-                    Sargasan Croass Road, Below The Fern
-                    Residency,Gandhinagar,Gujarat,
+                    Naxtra By Kavyaratna Sargasan Croass Road, Below The Fern Residency, Gandhinagar, Gujarat,
                     <br />
                     India.
                   </span>

@@ -77,35 +77,34 @@ export default function Contact() {
   };
 
   const [indiaTime, setIndiaTime] = useState("");
-const [dubaiTime, setDubaiTime] = useState("");
+  const [dubaiTime, setDubaiTime] = useState("");
 
-const getTimeByZone = (timeZone) => {
-  return new Intl.DateTimeFormat("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-    timeZone,
-  }).format(new Date());
-};
-
-useEffect(() => {
-  const updateTime = () => {
-    setIndiaTime(getTimeByZone("Asia/Kolkata"));
-    setDubaiTime(getTimeByZone("Asia/Dubai"));
+  const getTimeByZone = (timeZone) => {
+    return new Intl.DateTimeFormat("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+      timeZone,
+    }).format(new Date());
   };
 
-  updateTime(); // initial call
-  const interval = setInterval(updateTime, 1000);
+  useEffect(() => {
+    const updateTime = () => {
+      setIndiaTime(getTimeByZone("Asia/Kolkata"));
+      setDubaiTime(getTimeByZone("Asia/Dubai"));
+    };
 
-  return () => clearInterval(interval);
-}, []);
+    updateTime(); // initial call
+    const interval = setInterval(updateTime, 1000);
 
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 bg-secondary">
+      <section className="relative pt-32 pb-20 bg-secondary">
         <div className="container-luxury px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium tracking-widest uppercase mb-4 animate-fade-up">
@@ -150,9 +149,8 @@ useEffect(() => {
             </p>
             <p className="text-foreground mb-2 text-center md:text-left">
               Office #410 <br />
-              Naxtra By Kavyaratna <br />
-              Sargasan Croass Road, Below The Fern
-              Residency,Gandhinagar,Gujarat,
+              Naxtra By Kavyaratna Sargasan Croass Road, Below The Fern
+              Residency, Gandhinagar, Gujarat,
               <br />
               India .
             </p>
