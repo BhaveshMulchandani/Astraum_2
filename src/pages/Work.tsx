@@ -10,13 +10,14 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
+import Dining1 from "@/assets/Dining-1.jpg"
 
 const categories = ["All", "Residential", "Commercial", "Fitout", "Landscaping"];
 
 const projects = [
   {
     id: 1,
-    image: project1,
+    image: Dining1,
     title: "Modern Villa Retreat",
     category: "Residential",
     description: "A contemporary villa featuring open spaces, natural materials, and seamless indoor-outdoor flow.",
