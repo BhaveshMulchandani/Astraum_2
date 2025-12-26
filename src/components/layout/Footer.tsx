@@ -29,6 +29,16 @@ const services = [
   { name: "Landscaping", id: "landscaping-horticulture" },
 ];
 
+const handleSamePageClick = (path) => {
+  if (location.pathname === path) {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+};
+
 export function Footer() {
   const location = useLocation();
   const isContactPage = location.pathname === "/contact";
@@ -123,6 +133,7 @@ export function Footer() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
+                    onClick={() => handleSamePageClick(link.path)}
                     className="text-accent-foreground/70 hover:text-primary transition-colors duration-300"
                   >
                     {link.name}

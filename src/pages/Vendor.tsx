@@ -138,16 +138,18 @@ export default function Vendor() {
     <Layout>
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-secondary">
-        <div className="container-luxury text-center max-w-3xl mx-auto">
-          <p className="text-primary font-medium tracking-widest uppercase mb-4">
-            Vendor Registration
-          </p>
-          <h1 className="font-display text-4xl md:text-5xl font-medium mb-6">
-            Vendor Details Form
-          </h1>
-          <p className="text-muted-foreground text-lg">
-            Please fill in the details below to register as a vendor with us.
-          </p>
+        <div className="container-luxury px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-primary font-medium tracking-widest uppercase mb-4 animate-fade-up">
+              Vendor Registration
+            </p>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-6 animate-fade-up animation-delay-200">
+               Vendor Details Form
+            </h1>
+            <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed animate-fade-up animation-delay-400">
+              Please fill in the details below to register as a vendor with us.
+            </p>
+          </div>
         </div>
       </section>
 
