@@ -10,7 +10,7 @@ export default function ProjectDetail() {
 
   return (
     <Layout>
-      <section className="section-padding px-2 sm:px-4 md:px-8">
+      <section className="section-padding px-2 sm:px-4 md:px-8 pt-24 sm:pt-28 md:pt-32">
         <div className="container-luxury max-w-7xl mx-auto">
           <h1 className="font-display text-2xl sm:text-3xl md:text-4xl mb-4 break-words">{project.title}</h1>
           <p className="text-muted-foreground mb-8 text-base sm:text-lg max-w-3xl">{project.description}</p>
