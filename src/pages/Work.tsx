@@ -5,52 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { cn } from "@/lib/utils";
 import heroWork from "@/assets/hero-work.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
-import project5 from "@/assets/project-5.jpg";
-import Dining1 from "@/assets/Dining-1.jpg"
-
-const categories = ["All", "Residential", "Commercial", "Fitout", "Landscaping"];
-
-const projects = [
-  {
-    id: 1,
-    image: Dining1,
-    title: "Modern Villa Retreat",
-    category: "Residential",
-    description: "A contemporary villa featuring open spaces, natural materials, and seamless indoor-outdoor flow.",
-  },
-  {
-    id: 2,
-    image: project2,
-    title: "Artisan Restaurant",
-    category: "Commercial",
-    description: "An intimate dining space with warm ambiance and sophisticated design elements.",
-  },
-  {
-    id: 3,
-    image: project3,
-    title: "Luxury Kitchen Renovation",
-    category: "Fitout",
-    description: "A complete kitchen transformation with premium finishes and smart storage solutions.",
-  },
-  {
-    id: 4,
-    image: project4,
-    title: "Wellness Spa Center",
-    category: "Commercial",
-    description: "A serene wellness retreat designed to promote relaxation and rejuvenation.",
-  },
-  {
-    id: 5,
-    image: project5,
-    title: "Urban Garden Estate",
-    category: "Landscaping",
-    description: "A stunning outdoor living space with modern landscaping and fire features.",
-  },
-];
+import { projects, categories } from "../data/project";
 
 export default function Work() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -80,8 +35,8 @@ export default function Work() {
             Featured Work
           </h1>
           <p className="text-accent-foreground/80 text-lg md:text-xl max-w-2xl mx-auto animate-fade-up animation-delay-400">
-            Explore our collection of carefully crafted spaces that showcase 
-            our commitment to excellence and innovation in design.
+            Explore our collection of carefully crafted spaces that showcase our
+            commitment to excellence and innovation in design.
           </p>
         </div>
       </section>
@@ -123,10 +78,12 @@ export default function Work() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent/90 via-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <Button variant="outline-light" size="sm">
-                      View Project
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Link to={`/work/${project.id}`}>
+                      <Button variant="outline-light" size="sm">
+                        View Project
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
                 <p className="text-primary text-sm tracking-widest uppercase mb-2">
@@ -151,8 +108,8 @@ export default function Work() {
             Have a Project in Mind?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-            Let's discuss how we can bring your vision to life. Our team is ready 
-            to create something extraordinary for you.
+            Let's discuss how we can bring your vision to life. Our team is
+            ready to create something extraordinary for you.
           </p>
           <Button variant="gold" size="lg" asChild>
             <Link to="/contact">

@@ -12,6 +12,7 @@ import Careers from "./pages/Careers";
 import Partner from "./pages/Partner";
 import NotFound from "./pages/NotFound";
 import Vendor from "./pages/Vendor";
+import ProjectDetail from "./pages/ProjectDetail";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/partnerwithus" element={<Partner />} />
           <Route path="/vendorregistration" element={<Vendor />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/work/:id" element={<ProjectDetail/>}/>
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
