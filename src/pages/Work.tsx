@@ -1,19 +1,14 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { cn } from "@/lib/utils";
 import heroWork from "@/assets/hero-work.jpg";
-import { projects, categories } from "../data/project";
+import { projects } from "../data/project";
 
 export default function Work() {
-  const [activeFilter, setActiveFilter] = useState("All");
 
-  const filteredProjects =
-    activeFilter === "All"
-      ? projects
-      : projects.filter((project) => project.category === activeFilter);
+  // Sirf 5 projects
+  const visibleProjects = projects.slice(0, 5);
 
   return (
     <Layout>
@@ -31,40 +26,20 @@ export default function Work() {
           <p className="text-primary font-medium tracking-widest uppercase mb-4 animate-fade-up">
             Our Portfolio
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-accent-foreground mb-6 animate-fade-up animation-delay-200">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-accent-foreground mb-6">
             Featured Work
           </h1>
-          <p className="text-accent-foreground/80 text-lg md:text-xl max-w-2xl mx-auto animate-fade-up animation-delay-400">
-            Explore our collection of carefully crafted spaces that showcase our
-            commitment to excellence and innovation in design.
+          <p className="text-accent-foreground/80 text-lg md:text-xl max-w-2xl mx-auto">
+            Explore our collection of carefully crafted spaces.
           </p>
         </div>
       </section>
 
-      {/* Filter & Projects */}
+      {/* Projects Grid */}
       <section className="section-padding bg-background">
         <div className="container-luxury">
-          {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveFilter(category)}
-                className={cn(
-                  "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300",
-                  activeFilter === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-secondary-foreground hover:bg-primary/10"
-                )}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
+            {visibleProjects.map((project, index) => (
               <div
                 key={project.id}
                 className="group cursor-pointer"
@@ -86,13 +61,12 @@ export default function Work() {
                     </Link>
                   </div>
                 </div>
-                <p className="text-primary text-sm tracking-widest uppercase mb-2">
-                  {project.category}
-                </p>
-                <h3 className="font-display text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
+
+                <h3 className="font-display text-xl font-medium mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+
+                <p className="text-muted-foreground text-sm">
                   {project.description}
                 </p>
               </div>
@@ -104,12 +78,11 @@ export default function Work() {
       {/* CTA Section */}
       <section className="section-padding bg-secondary">
         <div className="container-luxury text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground mb-6">
+          <h2 className="font-display text-3xl md:text-4xl mb-6">
             Have a Project in Mind?
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-            Let's discuss how we can bring your vision to life. Our team is
-            ready to create something extraordinary for you.
+          <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
+            Let's discuss how we can bring your vision to life.
           </p>
           <Button variant="gold" size="lg" asChild>
             <Link to="/contact">

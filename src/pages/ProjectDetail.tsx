@@ -16,21 +16,60 @@ export default function ProjectDetail() {
           <p className="text-muted-foreground mb-8 text-base sm:text-lg max-w-3xl">{project.description}</p>
 
           {/* Image Gallery */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6 mb-12">
-            {project.gallery.map((img, index) => (
-              <div
-                key={index}
-                className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-sm"
-              >
-                <img
-                  src={img}
-                  alt={`Project image ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-            ))}
+          {/* Image Gallery */}
+<div className="space-y-12 mb-12">
+  {project.gallery.map((img, index) => {
+    // Full width image (0, 3, 6, 9...)
+    if (index % 3 === 0) {
+      return (
+        <div
+          key={index}
+          className="relative w-full aspect-[16/9] overflow-hidden rounded-xl"
+        >
+          <img
+            src={img}
+            alt={`Project image ${index + 1}`}
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
+        </div>
+      );
+    }
+
+    // Two images row (1,2 | 4,5 | 7,8...)
+    if (index % 3 === 1) {
+      return (
+        <div
+          key={index}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        >
+          <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+            <img
+              src={project.gallery[index]}
+              alt={`Project image ${index + 1}`}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
           </div>
+
+          {project.gallery[index + 1] && (
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <img
+                src={project.gallery[index + 1]}
+                alt={`Project image ${index + 2}`}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    return null;
+  })}
+</div>
+
 
           {/* Videos */}
           {/* {project.videos?.length > 0 && (

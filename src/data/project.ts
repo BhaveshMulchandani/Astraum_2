@@ -16,58 +16,58 @@ import view2 from "@/assets/View-2.jpg";
 import view3 from "@/assets/View-3.jpg";
 import view4 from "@/assets/View-4.jpg";
 
-export const categories = [
-  "All",
-  "Residential",
-  "Commercial",
-  "Fitout",
-  "Landscaping",
-];
-
 export const projects = [
   {
     id: 1,
     image: Dining1,
     title: "Modern Villa Retreat",
-    category: "Residential",
     description:
       "A contemporary villa featuring open spaces, natural materials, and seamless indoor-outdoor flow.",
-    gallery: [first,second,third,fourth,Dining1,Dining2,kitchen1,kitchen2,view1,view2,view3,view4],
+    gallery: [
+      first,
+      second,
+      third,
+      fourth,
+      Dining1,
+      Dining2,
+      kitchen1,
+      kitchen2,
+      view1,
+      view2,
+      view3,
+      view4,
+    ],
   },
   {
     id: 2,
     image: project2,
     title: "Artisan Restaurant",
-    category: "Commercial",
     description:
       "An intimate dining space with warm ambiance and sophisticated design elements.",
-      gallery: [],
+    gallery: [],
   },
   {
     id: 3,
     image: project3,
     title: "Luxury Kitchen Renovation",
-    category: "Fitout",
     description:
       "A complete kitchen transformation with premium finishes and smart storage solutions.",
-      gallery: [],
+    gallery: [],
   },
   {
     id: 4,
     image: project4,
     title: "Wellness Spa Center",
-    category: "Commercial",
     description:
       "A serene wellness retreat designed to promote relaxation and rejuvenation.",
-      gallery: [],
+    gallery: [],
   },
   {
     id: 5,
     image: project5,
     title: "Urban Garden Estate",
-    category: "Landscaping",
     description:
       "A stunning outdoor living space with modern landscaping and fire features.",
-      gallery: [],
+    gallery: [],
   },
 ];
