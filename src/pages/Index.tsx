@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import heroImage from "@/assets/hero-home.jpg";
+import heroImage from "@/assets/SD UPSCALE_00047_.png";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -79,18 +79,15 @@ const whyChooseUs = [
 const testimonials = [
   {
     text: "Astraum Infrastructure transformed our home beyond our wildest dreams. Their attention to detail and understanding of our vision was remarkable.",
-    author: "Sarah Mitchell",
-    role: "Homeowner",
+    author: "Arjun Mehra",
   },
   {
     text: "Working with this team was an absolute pleasure. They delivered a stunning office space that truly represents our brand.",
-    author: "James Chen",
-    role: "CEO, TechStart Inc.",
+    author: "Rohit Malhotra",
   },
   {
     text: "The level of professionalism and creativity exceeded our expectations. Our restaurant has never looked better.",
-    author: "Maria Rodriguez",
-    role: "Restaurant Owner",
+    author: "Mukesh Agrawal",
   },
 ];
 
@@ -306,9 +303,6 @@ export default function Index() {
                 </div>
                 <p className="font-display font-medium text-accent-foreground">
                   {testimonial.author}
-                </p>
-                <p className="text-accent-foreground/60 text-sm">
-                  {testimonial.role}
                 </p>
               </div>
             ))}
