@@ -1,5 +1,5 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
+import landscap_img_1 from "@/assets/landscap_img_1.png";
+import landscap_image_2 from "@/assets/landscap_image_2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
@@ -40,11 +40,11 @@ export const projects = [
   },
   {
     id: 2,
-    image: project2,
+    image: landscap_img_1,
     title: "Artisan Restaurant",
     description:
       "An intimate dining space with warm ambiance and sophisticated design elements.",
-    gallery: [],
+    gallery: [landscap_image_2,landscap_img_1],
   },
   {
     id: 3,
