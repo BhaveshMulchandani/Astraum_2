@@ -15,6 +15,7 @@ import view1 from "@/assets/View-1.jpg";
 import view2 from "@/assets/View-2.jpg";
 import view3 from "@/assets/View-3.jpg";
 import view4 from "@/assets/View-4.jpg";
+import image from "@/assets/images.png";
 
 export const projects = [
   {
@@ -52,7 +53,7 @@ export const projects = [
     title: "Luxury Kitchen Renovation",
     description:
       "A complete kitchen transformation with premium finishes and smart storage solutions.",
-    gallery: [],
+    gallery: [image,image,image],
   },
   {
     id: 4,
@@ -60,7 +61,7 @@ export const projects = [
     title: "Wellness Spa Center",
     description:
       "A serene wellness retreat designed to promote relaxation and rejuvenation.",
-    gallery: [],
+    gallery: [image,image,image],
   },
   {
     id: 5,
@@ -68,6 +69,6 @@ export const projects = [
     title: "Urban Garden Estate",
     description:
       "A stunning outdoor living space with modern landscaping and fire features.",
-    gallery: [],
+    gallery: [image,image,image],
   },
 ];
