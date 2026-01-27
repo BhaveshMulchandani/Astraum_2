@@ -3,9 +3,9 @@ import { ArrowRight, Award, Users, Clock, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import heroAbout from "@/assets/hero-about.jpg";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
+import team1 from "@/assets/team1.jpeg";
+import team2 from "@/assets/team2.jpeg";
+import team3 from "@/assets/team3.jpeg";
 
 const stats = [
   { number: "150+", label: "Projects Completed" },
@@ -43,18 +43,18 @@ const values = [
 
 const team = [
   {
-    name: "Alexandra Chen",
-    role: "Founder & Creative Director",
+    name: "Swachi Sharma",
+    // role: "Head - Horticulture & Landscape",
     image: team1,
   },
   {
-    name: "Michael Foster",
-    role: "Lead Architect",
+    name: "Shalin Joshi",
+    // role: "",
     image: team2,
   },
   {
-    name: "Emma Richards",
-    role: "Senior Interior Designer",
+    name: "Krishna Barot",
+    // role: "Senior Interior Designer",
     image: team3,
   },
 ];
@@ -266,7 +266,7 @@ export default function About() {
                 <h3 className="font-display text-xl font-medium text-foreground mb-1">
                   {member.name}
                 </h3>
-                <p className="text-muted-foreground">{member.role}</p>
+                {/* <p className="text-muted-foreground">{member.role}</p> */}
               </div>
             ))}
           </div>
