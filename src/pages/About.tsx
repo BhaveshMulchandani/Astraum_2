@@ -44,17 +44,17 @@ const values = [
 const team = [
   {
     name: "Swachi Sharma",
-    // role: "Head - Horticulture & Landscape",
+    role: "Head - Horticulture & Landscape",
     image: team1,
   },
   {
     name: "Shalin Joshi",
-    // role: "",
+    role: "To be added",
     image: team2,
   },
   {
     name: "Krishna Barot",
-    // role: "Senior Interior Designer",
+    role: "Senior Interior Designer",
     image: team3,
   },
 ];
@@ -266,7 +266,7 @@ export default function About() {
                 <h3 className="font-display text-xl font-medium text-foreground mb-1">
                   {member.name}
                 </h3>
-                {/* <p className="text-muted-foreground">{member.role}</p> */}
+                <p className="text-muted-foreground">{member.role}</p>
               </div>
             ))}
           </div>
