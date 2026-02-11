@@ -44,12 +44,12 @@ const values = [
 const team = [
   {
     name: "Swachi Sharma",
-    role: "Head - Horticulture & Landscape",
+    role: "Head - AI - Driven Design & Interiors",
     image: team1,
   },
   {
     name: "Shalin Joshi",
-    role: "To be added",
+    role: "Lead - Horticulture & Landscape",
     image: team2,
   },
   {
