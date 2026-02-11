@@ -19,19 +19,21 @@ import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
 
 const services = [
+
   {
-    icon: Palette,
-    title: "Design Consultant",
+    icon: TreePine,
+    title: "Landscaping & Horticulture",
     description:
-      "Our interior design consultants work closely with you to understand your vision, lifestyle, and design preferences. Through thoughtful discussions and expert guidance, we help shape a clear direction for your project, ensuring every decision aligns with your space, style, and budget.",
-    image: project1,
+      "Extend your living spaces outdoors with thoughtful landscaping and horticulture services. We design outdoor environments that complement your interior design while improving comfort, usability, and overall property appeal.",
+    image: project5,
     features: [
-      "Personalized interior design consultation",
-      "Space planning and layout design",
-      "Material and finish selection",
-      "Budget planning and optimization",
+      "Landscape architecture and planning",
+      "Garden design and softscape detailing",
+      "Outdoor living spaces for homes and villas",
+      "Sustainable planting and irrigation solutions",
     ],
   },
+  
   {
     icon: Hammer,
     title: "Interior Fitout",
@@ -73,16 +75,16 @@ const services = [
     ],
   },
   {
-    icon: TreePine,
-    title: "Landscaping & Horticulture",
+    icon: Palette,
+    title: "Design Consultant",
     description:
-      "Extend your living spaces outdoors with thoughtful landscaping and horticulture services. We design outdoor environments that complement your interior design while improving comfort, usability, and overall property appeal.",
-    image: project5,
+      "Our interior design consultants work closely with you to understand your vision, lifestyle, and design preferences. Through thoughtful discussions and expert guidance, we help shape a clear direction for your project, ensuring every decision aligns with your space, style, and budget.",
+    image: project1,
     features: [
-      "Landscape architecture and planning",
-      "Garden design and softscape detailing",
-      "Outdoor living spaces for homes and villas",
-      "Sustainable planting and irrigation solutions",
+      "Personalized interior design consultation",
+      "Space planning and layout design",
+      "Material and finish selection",
+      "Budget planning and optimization",
     ],
   },
 ];

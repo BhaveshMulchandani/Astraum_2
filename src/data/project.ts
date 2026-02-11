@@ -47,28 +47,28 @@ export const projects = [
       "An intimate dining space with warm ambiance and sophisticated design elements.",
     gallery: [landscap_image_2,landscap_img_1],
   },
-  {
-    id: 3,
-    image: project3,
-    title: "Luxury Kitchen Renovation",
-    description:
-      "A complete kitchen transformation with premium finishes and smart storage solutions.",
-    gallery: [image,image,image],
-  },
-  {
-    id: 4,
-    image: project4,
-    title: "Wellness Spa Center",
-    description:
-      "A serene wellness retreat designed to promote relaxation and rejuvenation.",
-    gallery: [image,image,image],
-  },
-  {
-    id: 5,
-    image: project5,
-    title: "Urban Garden Estate",
-    description:
-      "A stunning outdoor living space with modern landscaping and fire features.",
-    gallery: [image,image,image],
-  },
+  // {
+  //   id: 3,
+  //   image: project3,
+  //   title: "Luxury Kitchen Renovation",
+  //   description:
+  //     "A complete kitchen transformation with premium finishes and smart storage solutions.",
+  //   gallery: [image,image,image],
+  // },
+  // {
+  //   id: 4,
+  //   image: project4,
+  //   title: "Wellness Spa Center",
+  //   description:
+  //     "A serene wellness retreat designed to promote relaxation and rejuvenation.",
+  //   gallery: [image,image,image],
+  // },
+  // {
+  //   id: 5,
+  //   image: project5,
+  //   title: "Urban Garden Estate",
+  //   description:
+  //     "A stunning outdoor living space with modern landscaping and fire features.",
+  //   gallery: [image,image,image],
+  // },
 ];

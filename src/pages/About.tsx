@@ -8,10 +8,10 @@ import team2 from "@/assets/team2.jpeg";
 import team3 from "@/assets/team3.jpeg";
 
 const stats = [
-  { number: "150+", label: "Projects Completed" },
-  { number: "12", label: "Years Experience" },
+  { number: "100+", label: "Projects Completed" },
+  { number: "10", label: "Years Experience" },
   { number: "45+", label: "Team Members" },
-  { number: "8", label: "Design Awards" },
+  { number: "3", label: "Design Awards" },
 ];
 
 const values = [
@@ -152,14 +152,14 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-[3/4] rounded-lg overflow-hidden mt-8">
                 <img
-                  src={team1}
+                  src={team3}
                   alt="Team member"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="aspect-[3/4] rounded-lg overflow-hidden">
                 <img
-                  src={team2}
+                  src={team1}
                   alt="Team member"
                   className="w-full h-full object-cover"
                 />
