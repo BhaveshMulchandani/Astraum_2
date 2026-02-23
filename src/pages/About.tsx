@@ -6,6 +6,7 @@ import heroAbout from "@/assets/hero-about.jpg";
 import team1 from "@/assets/team1.jpeg";
 import team2 from "@/assets/team2.jpeg";
 import team3 from "@/assets/team3.jpeg";
+import team4 from "@/assets/team_4.png";
 
 const stats = [
   { number: "100+", label: "Projects Completed" },
@@ -43,6 +44,11 @@ const values = [
 
 const team = [
   {
+    name: "Krishna Barot",
+    role: "Interior Architect AI",
+    image: team3,
+  },
+  {
     name: "Swachi Sharma",
     role: "Head - AI - Driven Design & Interiors",
     image: team1,
@@ -52,11 +58,12 @@ const team = [
     role: "Lead - Horticulture & Landscape",
     image: team2,
   },
-  {
-    name: "Krishna Barot",
-    role: "Senior Interior Designer",
-    image: team3,
-  },
+   {
+    name: "Nagesh Pawar",
+    role: "Astraum AI - Operation Head",
+    image: team4,
+  }
+  
 ];
 
 const achievements = [
