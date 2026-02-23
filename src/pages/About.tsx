@@ -49,14 +49,14 @@ const team = [
     image: team3,
   },
   {
-    name: "Swachi Sharma",
-    role: "Head - AI - Driven Design & Interiors",
-    image: team1,
-  },
-  {
     name: "Shalin Joshi",
     role: "Lead - Horticulture & Landscape",
     image: team2,
+  },
+  {
+    name: "Swachi Sharma",
+    role: "Head - AI - Driven Design & Interiors",
+    image: team1,
   },
    {
     name: "Nagesh Pawar",
