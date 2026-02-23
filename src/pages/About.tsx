@@ -45,7 +45,7 @@ const values = [
 const team = [
   {
     name: "Krishna Barot",
-    role: "Interior Architect AI",
+    role: "Chief Interior Architect AI",
     image: team3,
   },
   {
