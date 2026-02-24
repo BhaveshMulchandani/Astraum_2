@@ -13,6 +13,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import { Helmet } from "react-helmet-async";
 
 const jobs = [
   {
@@ -20,7 +21,8 @@ const jobs = [
     title: "Business Development manager",
     location: "India, IND",
     type: "Full-time",
-    description: "We're looking for an experienced business development manager to lead residential and commercial projects from concept to completion.",
+    description:
+      "We're looking for an experienced business development manager to lead residential and commercial projects from concept to completion.",
     requirements: [
       "5+ years of Business Development Experience",
       "Proficiency in AutoCAD, SketchUp, and Adobe Creative Suite",
@@ -34,7 +36,8 @@ const jobs = [
     title: "Project Manager",
     location: "India, Ind",
     type: "Full-time",
-    description: "Oversee the execution of interior design projects, ensuring timely delivery and client satisfaction.",
+    description:
+      "Oversee the execution of interior design projects, ensuring timely delivery and client satisfaction.",
     requirements: [
       "3+ years of project management experience",
       "Background in interior design or construction",
@@ -47,19 +50,23 @@ const jobs = [
 const culturePoints = [
   {
     title: "Creative Freedom",
-    description: "We encourage original thinking and give our teams the space to explore fresh design ideas and creative solutions.",
+    description:
+      "We encourage original thinking and give our teams the space to explore fresh design ideas and creative solutions.",
   },
   {
     title: "Growth Opportunities",
-    description: "Continuous learning and professional development are central to our culture, ensuring you grow your craft and your career.",
+    description:
+      "Continuous learning and professional development are central to our culture, ensuring you grow your craft and your career.",
   },
   {
     title: "Collaborative Environment",
-    description: "Work closely with experienced designers, architects, and project specialists who share a passion for thoughtful, high-quality design.",
+    description:
+      "Work closely with experienced designers, architects, and project specialists who share a passion for thoughtful, high-quality design.",
   },
   {
     title: "Work-Life Balance",
-    description: "We prioritise your well-being and support a balanced work environment where you can thrive personally and professionally.",
+    description:
+      "We prioritise your well-being and support a balanced work environment where you can thrive personally and professionally.",
   },
 ];
 
@@ -76,64 +83,73 @@ export default function Careers() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbzQJVkaqJx5ka2WnTWR90eVdq21Vl6-ou3BqmWamcd8_9fp3Kb17tYyXUJdzGG-ZkAgxw/exec",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzQJVkaqJx5ka2WnTWR90eVdq21Vl6-ou3BqmWamcd8_9fp3Kb17tYyXUJdzGG-ZkAgxw/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(formData).toString(),
         },
-        body: new URLSearchParams(formData).toString(),
+      );
+
+      const result = await response.json();
+
+      if (result.ok) {
+        toast({
+          title: "Application Submitted!",
+          description:
+            "Thank you for your interest. We'll review your application and get back to you soon.",
+        });
+
+        setFormData({
+          position: "",
+          name: "",
+          email: "",
+          phone: "",
+          portfolio: "",
+          message: "",
+        });
+
+        setIsDialogOpen(false);
+      } else {
+        throw new Error(result.error);
       }
-    );
-
-    const result = await response.json();
-
-    if (result.ok) {
+    } catch (error) {
       toast({
-        title: "Application Submitted!",
-        description:
-          "Thank you for your interest. We'll review your application and get back to you soon.",
+        title: "Submission Failed",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
       });
-
-      setFormData({
-        position: "",
-        name: "",
-        email: "",
-        phone: "",
-        portfolio: "",
-        message: "",
-      });
-
-      setIsDialogOpen(false);
-    } else {
-      throw new Error(result.error);
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (error) {
-    toast({
-      title: "Submission Failed",
-      description: "Something went wrong. Please try again later.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
-
+  };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
     <Layout>
+      <Helmet>
+        <title>Careers at Astraum AI | Interior Design & Fitout Jobs</title>
+
+        <meta
+          name="description"
+          content="Explore interior design and project management careers at Astraum AI. Join a collaborative team delivering residential and commercial interiors."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-secondary">
         <div className="container-luxury">
@@ -145,7 +161,10 @@ const handleSubmit = async (e) => {
               Join Our Creative Team
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed animate-fade-up animation-delay-400">
-             We’re always looking for designers, architects, and project professionals who share our passion for thoughtful, high-quality interior design. Explore opportunities to grow with us and contribute to meaningful residential and commercial projects.
+              We’re always looking for designers, architects, and project
+              professionals who share our passion for thoughtful, high-quality
+              interior design. Explore opportunities to grow with us and
+              contribute to meaningful residential and commercial projects.
             </p>
           </div>
         </div>
@@ -162,7 +181,9 @@ const handleSubmit = async (e) => {
               Why Work With Us
             </h2>
             <p className="text-muted-foreground text-lg">
-            We create a supportive, collaborative environment where designers and project teams can grow, experiment, and do meaningful work that shapes exceptional interiors.
+              We create a supportive, collaborative environment where designers
+              and project teams can grow, experiment, and do meaningful work
+              that shapes exceptional interiors.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -224,7 +245,9 @@ const handleSubmit = async (e) => {
                 </div>
                 <p className="text-muted-foreground mb-4">{job.description}</p>
                 <div>
-                  <p className="font-medium text-foreground mb-2">Requirements:</p>
+                  <p className="font-medium text-foreground mb-2">
+                    Requirements:
+                  </p>
                   <ul className="list-disc list-inside text-muted-foreground space-y-1">
                     {job.requirements.map((req) => (
                       <li key={req}>{req}</li>
@@ -235,7 +258,11 @@ const handleSubmit = async (e) => {
             ))}
           </div>
           <div className="flex justify-center mt-10">
-            <Button variant="gold" size="lg" onClick={() => setIsDialogOpen(true)}>
+            <Button
+              variant="gold"
+              size="lg"
+              onClick={() => setIsDialogOpen(true)}
+            >
               Apply Now
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -265,9 +292,13 @@ const handleSubmit = async (e) => {
                 required
                 className="mt-1 h-12 w-full bg-card border border-border rounded-md px-3 py-2 focus:outline-none focus:border-primary text-foreground"
               >
-                <option value="" disabled>Select a position</option>
-                {jobs.map(job => (
-                  <option key={job.id} value={job.title}>{job.title}</option>
+                <option value="" disabled>
+                  Select a position
+                </option>
+                {jobs.map((job) => (
+                  <option key={job.id} value={job.title}>
+                    {job.title}
+                  </option>
                 ))}
                 <option value="Other">Other</option>
               </select>

@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -103,6 +104,14 @@ export default function Contact() {
 
   return (
     <Layout>
+      <Helmet>
+              <title>Our Offices | Interior Design Studio in India & Dubai</title>
+      
+              <meta
+                name="description"
+                content="Visit Astraum’s interior design studios in India and Dubai. Get directions, contact details, and connect with our residential and commercial design team."
+              />
+            </Helmet>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-secondary">
         <div className="container-luxury px-4 sm:px-6 lg:px-8">

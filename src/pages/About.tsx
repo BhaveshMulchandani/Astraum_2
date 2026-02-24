@@ -7,6 +7,7 @@ import team1 from "@/assets/team1.jpeg";
 import team2 from "@/assets/team2.jpeg";
 import team3 from "@/assets/team3.jpeg";
 import team4 from "@/assets/team_4.png";
+import { Helmet } from "react-helmet-async";
 
 const stats = [
   { number: "100+", label: "Projects Completed" },
@@ -58,12 +59,11 @@ const team = [
     role: "Head - AI - Driven Design & Interiors",
     image: team1,
   },
-   {
+  {
     name: "Nagesh Pawar",
     role: "Astraum AI - Operation Head",
     image: team4,
-  }
-  
+  },
 ];
 
 const achievements = [
@@ -79,6 +79,14 @@ const achievements = [
 export default function About() {
   return (
     <Layout>
+      <Helmet>
+        <title>About Astraum | Luxury Interior Designers in India & UAE</title>
+
+        <meta
+          name="description"
+          content="Learn about Astraum, a luxury interior design and turnkey fitout studio delivering residential and commercial projects across India and the UAE."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center">
         <div className="absolute inset-0">
@@ -132,13 +140,13 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Astraum Infra and Astraum Middle East, brings Seven
-                  years of Dubai design expertise to residential and commercial
-                  interior design and turnkey fitouts across India and the UAE.
-                  What began as a collaboration between two design-driven
-                  studios has grown into a multidisciplinary team delivering
-                  thoughtful layouts, detailed 3D visualisations, and seamless
-                  on-site execution.
+                  Astraum Infra and Astraum Middle East, brings Seven years of
+                  Dubai design expertise to residential and commercial interior
+                  design and turnkey fitouts across India and the UAE. What
+                  began as a collaboration between two design-driven studios has
+                  grown into a multidisciplinary team delivering thoughtful
+                  layouts, detailed 3D visualisations, and seamless on-site
+                  execution.
                 </p>
                 <p>
                   We combine global design sensibilities with local context,

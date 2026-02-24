@@ -17,9 +17,9 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
+import { Helmet } from "react-helmet-async";
 
 const services = [
-
   {
     icon: TreePine,
     title: "Landscaping & Horticulture",
@@ -33,7 +33,7 @@ const services = [
       "Sustainable planting and irrigation solutions",
     ],
   },
-  
+
   {
     icon: Hammer,
     title: "Interior Fitout",
@@ -90,7 +90,6 @@ const services = [
 ];
 
 export default function Services() {
-
   const location = useLocation();
 
   useEffect(() => {
@@ -107,9 +106,18 @@ export default function Services() {
     }
   }, [location.hash]);
 
-  
   return (
     <Layout>
+      <Helmet>
+        <title>
+          Interior Design Services | Residential & Commercial Solutions
+        </title>
+
+        <meta
+          name="description"
+          content="From design consultation to execution, we deliver residential and commercial interior solutions crafted with thoughtful planning and refined detail."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-secondary">
         <div className="container-luxury">

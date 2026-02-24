@@ -15,6 +15,7 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
+import { Helmet } from "react-helmet-async";
 
 const services = [
   {
@@ -94,6 +95,18 @@ const testimonials = [
 export default function Index() {
   return (
     <Layout>
+
+       <Helmet>
+        <title>
+          Luxury Interior Designers in India | Residential & Commercial Design
+        </title>
+
+        <meta
+          name="description"
+          content="Award-winning luxury interior designers in India creating residential and commercial spaces that blend elegance, comfort, and functionality."
+        />
+        
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-screen min-h-[700px] flex items-center">
         <div className="absolute inset-0">

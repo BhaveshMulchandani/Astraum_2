@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
+import { Helmet } from "react-helmet-async";
 
 const WEB_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
 
@@ -136,6 +137,14 @@ export default function Vendor() {
 
   return (
     <Layout>
+      <Helmet>
+              <title>Vendor Registration | Partner with Astraum</title>
+      
+              <meta
+                name="description"
+                content="Register as a vendor with Astraum to collaborate on residential and commercial interior design and fitout projects."
+              />
+            </Helmet>
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-secondary">
         <div className="container-luxury px-4 sm:px-6 lg:px-8">

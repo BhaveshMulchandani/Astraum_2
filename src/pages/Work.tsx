@@ -4,14 +4,24 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import heroWork from "@/assets/hero-work.jpg";
 import { projects } from "../data/project";
+import { Helmet } from "react-helmet-async";
 
 export default function Work() {
-
   // Sirf 5 projects
   const visibleProjects = projects.slice(0, 5);
 
   return (
     <Layout>
+      <Helmet>
+        <title>
+          Interior Design Portfolio | Luxury Residential & Commercial Projects
+        </title>
+
+        <meta
+          name="description"
+          content="Explore our luxury interior design portfolio featuring residential and commercial projects crafted with refined aesthetics and quality craftsmanship."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center">
         <div className="absolute inset-0">
