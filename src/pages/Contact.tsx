@@ -37,7 +37,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbz-h40G5hwGsfH1vMl7xZdut9O-31BRR0URprRsK8gJWXb4BZt8wc2DUaQ4KNaqQO7Y/exec",
+        import.meta.env.VITE_CONTACT_GOOGLE_SCRIPT_URL,
         {
           method: "POST",
           headers: {

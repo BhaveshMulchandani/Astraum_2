@@ -89,7 +89,7 @@ export default function Careers() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzQJVkaqJx5ka2WnTWR90eVdq21Vl6-ou3BqmWamcd8_9fp3Kb17tYyXUJdzGG-ZkAgxw/exec",
+        import.meta.env.VITE_CAREERS_GOOGLE_SCRIPT_URL,
         {
           method: "POST",
           headers: {

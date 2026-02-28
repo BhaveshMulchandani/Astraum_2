@@ -67,7 +67,7 @@ export default function Vendor() {
 
     try {
       const fd = new FormData();
-      fd.append("formType", "Vendor");
+      fd.append("formType", "vendor");
 
       Object.entries(formData).forEach(([key, value]) => {
         if (Array.isArray(value)) {
